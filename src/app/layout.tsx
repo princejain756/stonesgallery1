@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   openGraph: {
     title: "Stones Gallery - Premium Natural Stones & Construction Materials",
     description: "Discover exquisite stone collections at Stones Gallery. We offer high-quality stones for construction, decoration, and more.",

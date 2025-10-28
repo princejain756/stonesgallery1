@@ -7,7 +7,7 @@ import { Menu, User, X } from 'lucide-react';
 
 const socialLinks = [
   {
-    href: 'https://www.instagram.com/nivasa_home/',
+    href: 'https://www.instagram.com/miraclestonex24/',
     src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/instagram_icon_white-2.svg',
     alt: 'Instagram',
   },
@@ -87,14 +87,10 @@ export default function Header() {
                 </ul>
               </div>
               <div className="w-1/3 flex justify-center">
-                <Link href="/">
-                  <Image
-                    src="/Stonesgallery logo.webp"
-                    alt="Stones Gallery"
-                    width={200}
-                    height={50}
-                    className="object-contain"
-                  />
+                <Link href="/" className="text-white hover:text-white/90 transition-colors">
+                  <h1 className="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase">
+                    Stones Gallery
+                  </h1>
                 </Link>
               </div>
               <div className="w-1/3 flex justify-end items-center gap-4">
@@ -140,14 +136,10 @@ export default function Header() {
             <button onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
               <Menu className="h-6 w-6 text-white" />
             </button>
-            <Link href="/">
-              <Image
-                src="/Stonesgallery logo.webp"
-                alt="Stones Gallery"
-                width={120}
-                height={30}
-                className="object-contain"
-              />
+            <Link href="/" className="text-white hover:text-white/90 transition-colors">
+              <h1 className="text-lg font-light tracking-[0.15em] uppercase">
+                Stones Gallery
+              </h1>
             </Link>
             <div className="flex items-center gap-4">
               <Link href="/account" aria-label="Account" className="group">

@@ -38,9 +38,9 @@ const HeroVideo = (): JSX.Element => {
       {/* Content Layer */}
       <div className="relative z-20 flex h-full flex-col items-center justify-center p-5">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-light tracking-[0.25em] leading-none mb-4">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.25em] leading-none mb-4">
             <span className="block mb-2">WORLD</span>
-            <span className="italic text-3xl md:text-4xl lg:text-5xl font-serif mb-4 block">Of</span>
+            <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif mb-4 block">Of</span>
             <span className="block mb-1">STONES</span>
             <span className="block">GALLERY</span>
           </h1>
@@ -48,7 +48,7 @@ const HeroVideo = (): JSX.Element => {
 
         <Link
           href="/pages/our-story"
-          className="absolute bottom-20 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 border-2 border-white bg-transparent px-6 py-4 text-center text-base uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white/10 md:w-auto md:px-12"
+          className="absolute bottom-10 sm:bottom-16 md:bottom-20 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 border-2 border-white bg-transparent px-6 py-4 text-center text-base uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white/10 md:w-auto md:px-12"
         >
           OUR STORY
         </Link>

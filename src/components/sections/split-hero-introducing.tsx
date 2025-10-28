@@ -27,14 +27,14 @@ const SplitHeroIntroducing = () => {
         
         <div className="relative z-10 h-full flex flex-col items-center justify-center p-8 text-center lg:items-end lg:justify-end lg:p-24 lg:text-right">
             <div className="flex flex-col items-center lg:items-end">
-                <h3 className="font-light text-xl uppercase tracking-[0.2em] mb-6">
+                <h3 className="font-light text-lg sm:text-xl uppercase tracking-[0.2em] mb-6">
                     Introducing
                 </h3>
                 <div className="mb-8">
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light uppercase tracking-[0.1em] text-white">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light uppercase tracking-[0.1em] text-white">
                         STONES GALLERY
                     </h1>
-                    <h2 className="text-2xl lg:text-3xl xl:text-4xl font-light italic text-white mt-2">
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light italic text-white mt-2">
                         Classic
                     </h2>
                 </div>
