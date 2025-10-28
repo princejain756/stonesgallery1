@@ -63,7 +63,7 @@ export default function WelcomeModal() {
         {/* Right Side: Content */}
         <div className="bg-[#3a3a3a] text-center flex flex-col justify-center p-8 sm:p-12 lg:p-16">
           <p className="text-[0.75rem] uppercase tracking-[0.15em] text-[#999999]">
-            WELCOME TO THE WORLD OF NIVASA
+            WELCOME TO THE WORLD OF STONES GALLERY
           </p>
 
           <h2 className="mt-4 text-[2rem] font-normal leading-tight text-white">

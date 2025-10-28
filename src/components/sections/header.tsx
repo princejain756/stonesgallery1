@@ -52,7 +52,9 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          isScrolled ? 'bg-[#181818]/95 backdrop-blur-md' : 'bg-transparent'
+          isScrolled
+            ? 'bg-[#1a1a1a]/95 backdrop-blur-md'
+            : 'bg-gradient-to-b from-[#3a3a3a]/80 to-[#1f1f1f]/80'
         }`}
       >
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
@@ -67,9 +69,18 @@ export default function Header() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="opacity-80 hover:opacity-100 transition-opacity"
+                        className="group block"
+                        aria-label={link.alt}
                       >
-                        <Image src={link.src} alt={link.alt} width={18} height={18} />
+                        <span className="h-9 w-9 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80">
+                          <Image
+                            src={link.src}
+                            alt={link.alt}
+                            width={18}
+                            height={18}
+                            className="opacity-90 group-hover:opacity-100"
+                          />
+                        </span>
                       </a>
                     </li>
                   ))}
@@ -77,41 +88,44 @@ export default function Header() {
               </div>
               <div className="w-1/3 flex justify-center">
                 <Link href="/">
-                  <span
-                    className="text-white font-serif uppercase tracking-[0.3em] text-center inline-block"
-                    style={{ width: '180px', fontSize: '18px' }}
-                  >
-                    NIVASA
-                  </span>
+                  <Image
+                    src="/Stonesgallery logo.webp"
+                    alt="Stones Gallery"
+                    width={200}
+                    height={50}
+                    className="object-contain"
+                  />
                 </Link>
               </div>
-              <div className="w-1/3 flex justify-end items-center gap-6">
-                <Link href="/account">
-                  <User className="h-5 w-5 text-white transition-transform hover:scale-110" />
+              <div className="w-1/3 flex justify-end items-center gap-4">
+                <Link href="/account" aria-label="Account" className="group">
+                  <span className="h-9 w-9 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80">
+                    <User className="h-5 w-5 text-white/95" />
+                  </span>
                 </Link>
-                <button aria-label="Search">
-                  <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
-                    alt="Search"
-                    width={20}
-                    height={20}
-                    className="transition-transform hover:scale-110"
-                  />
+                <button aria-label="Search" className="group">
+                  <span className="h-9 w-9 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80">
+                    <Image
+                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
+                      alt="Search"
+                      width={18}
+                      height={18}
+                      className="opacity-95"
+                    />
+                  </span>
                 </button>
               </div>
             </div>
-            <hr
-              className={`border-white/20 transition-opacity duration-300 ${
-                isScrolled ? 'border-b' : ''
-              }`}
-            />
-            <nav className="flex justify-center items-center h-[50px]">
-              <ul className="flex items-center gap-8">
+            <div className="px-2">
+              <div className="h-px w-full border-t border-white/50" />
+            </div>
+            <nav className="flex justify-center items-center h-[52px]">
+              <ul className="flex items-center w-full max-w-[1100px] justify-between">
                 {navLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-white text-sm tracking-[0.1em] uppercase transition-colors hover:text-[#CCCCCC]"
+                      className="text-white text-[11px] tracking-[0.1em] font-medium uppercase transition-colors hover:text-white/90"
                     >
                       {link.label}
                     </Link>
@@ -127,24 +141,29 @@ export default function Header() {
               <Menu className="h-6 w-6 text-white" />
             </button>
             <Link href="/">
-              <span
-                className="text-white font-serif uppercase tracking-[0.2em] text-center inline-block"
-                style={{ width: '120px', fontSize: '18px' }}
-              >
-                NIVASA
-              </span>
+              <Image
+                src="/Stonesgallery logo.webp"
+                alt="Stones Gallery"
+                width={120}
+                height={30}
+                className="object-contain"
+              />
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/account">
-                <User className="h-5 w-5 text-white" />
+              <Link href="/account" aria-label="Account" className="group">
+                <span className="h-8 w-8 rounded-full border border-white/50 flex items-center justify-center">
+                  <User className="h-4 w-4 text-white/95" />
+                </span>
               </Link>
-              <button aria-label="Search">
-                <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
-                  alt="Search"
-                  width={20}
-                  height={20}
-                />
+              <button aria-label="Search" className="group">
+                <span className="h-8 w-8 rounded-full border border-white/50 flex items-center justify-center">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
+                    alt="Search"
+                    width={16}
+                    height={16}
+                  />
+                </span>
               </button>
             </div>
           </div>
@@ -188,7 +207,7 @@ export default function Header() {
       </div>
 
       {/* Header Backfill */}
-      <div className="hidden lg:block h-[140px]" />
+      <div className="hidden lg:block h-[148px]" />
       <div className="lg:hidden h-[60px]" />
     </>
   );
