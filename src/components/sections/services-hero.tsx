@@ -13,13 +13,10 @@ export default function ServicesHero() {
     <section className="relative h-[85vh] w-full overflow-hidden text-white md:h-screen">
       {/* Background media (GIF) */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src="/FROMDREAMTOREALITY/FINAL.gif"
           alt="Services background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+          className="h-full w-full object-cover"
         />
         {/* Subtle dark overlay above GIF but below text */}
         <div className="absolute inset-0 bg-black/15" />
@@ -42,7 +39,7 @@ export default function ServicesHero() {
       {/* Bottom center CTA */}
       <Link
         href="/pages/our-services"
-        className="absolute bottom-[8%] left-1/2 z-30 -translate-x-1/2 border-2 border-white bg-transparent px-8 py-3 text-center text-xs uppercase tracking-[0.15em] text-white transition-colors hover:bg-white/10 md:px-12"
+        className="absolute bottom-[8%] left-1/2 z-30 -translate-x-1/2 border-2 border-white bg-transparent px-8 py-3 text-center text-sm md:text-xs uppercase tracking-[0.15em] text-white transition-colors hover:bg-white/10 md:px-12"
       >
         OUR SERVICES
       </Link>
