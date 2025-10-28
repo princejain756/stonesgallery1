@@ -5,45 +5,45 @@ import Link from "next/link";
 import React from "react";
 
 const HeroVideo = (): JSX.Element => {
+
   return (
     <section className="relative h-screen w-full overflow-hidden text-white">
       {/* Background Video Layer */}
-      <div className="absolute inset-0 -z-10">
-        <video
-          key="desktop-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hidden h-full w-full object-cover md:block"
-          src="https://cdn.shopify.com/videos/c/o/v/f2ab0c388c6547e790669e1258c7cc6d.mp4"
-        />
-        <video
-          key="mobile-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="block h-full w-full object-cover md:hidden"
-          src="https://cdn.shopify.com/videos/c/o/v/83ffac2b3cf24a6f96dc4674618771cc.mp4"
-        />
-      </div>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 h-full w-full object-cover z-0"
+        style={{ 
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
+      >
+        <source src="/herovideo.webm" type="video/webm" />
+        <source src="/herovideo.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Fallback background in case video fails */}
+      <div className="absolute inset-0 bg-gray-800 -z-10" />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
 
       {/* Content Layer */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center p-5">
-        <div className="w-[80%] md:w-auto md:max-w-[600px]">
-          <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/home-video-text_c7f508eb-c5d5-442a-8a4c-f14a5eaaba-1.png"
-            alt="A design house where personalisation meets luxury."
-            width={600}
-            height={150}
-            className="h-auto w-full"
-            style={{ filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))" }}
-            priority
-          />
+      <div className="relative z-20 flex h-full flex-col items-center justify-center p-5">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-light tracking-[0.25em] leading-none mb-4">
+            <span className="block mb-2">WORLD</span>
+            <span className="italic text-3xl md:text-4xl lg:text-5xl font-serif mb-4 block">Of</span>
+            <span className="block mb-1">STONES</span>
+            <span className="block">GALLERY</span>
+          </h1>
         </div>
 
         <Link

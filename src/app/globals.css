@@ -1,14 +1,13 @@
 /* Updated: 2025-10-27T12:19:23.720Z */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-background: #f5f4f0;
-  --color-foreground: #3a3a3a;
+  --color-background: #ffffff;
+  --color-foreground: #8d8986; /* matches Stones Gallery body tone */
 
   --color-card: #ffffff;
   --color-card-foreground: #3a3a3a;
@@ -88,9 +87,9 @@
   --color-button-primary: transparent;
   --color-button-hover: #ffffff;
 
-  --font-gt-standard: "GT Standard", sans-serif;
-  --font-body: "GT Standard", sans-serif;
-  --font-display: "GT Standard", sans-serif;
+  --font-gt-standard: "Lato", sans-serif;
+  --font-body: "Lato", sans-serif;
+  --font-display: "Lato", sans-serif;
 }
 
 /*
@@ -119,8 +118,8 @@
 
 @layer base {
   :root {
-    --background: var(--color-bg-primary);
-    --foreground: var(--color-text-primary);
+    --background: var(--color-bg-secondary);
+    --foreground: var(--color-foreground);
     --card: var(--color-bg-secondary);
     --card-foreground: var(--color-text-primary);
     --popover: var(--color-bg-secondary);

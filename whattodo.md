@@ -1,0 +1,1 @@
+create a backend with postgresql where when i upload images it shows in front end appropriately 

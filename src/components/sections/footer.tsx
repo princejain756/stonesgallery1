@@ -47,7 +47,7 @@ const Footer = () => {
       <div className="mx-auto max-w-[1200px] px-8 py-16 md:px-5">
         <div className="text-center">
           <h2 className="font-display mb-4 text-[2rem] leading-none tracking-[0.3em] text-[#333333]">
-            NIVASA
+            STONES GALLERY
           </h2>
           <p className="text-sm uppercase tracking-[0.15em] text-[#999999]">
             OUR WORLD

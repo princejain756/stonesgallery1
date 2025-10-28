@@ -20,7 +20,7 @@ const SplitHeroIntroducing = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/classic_contemporary-51-desk_1080x-12.jpg')`,
+            backgroundImage: `url('/imagesfor2ndsection/1.jpeg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
@@ -31,13 +31,12 @@ const SplitHeroIntroducing = () => {
                     Introducing
                 </h3>
                 <div className="mb-8">
-                     <Image
-                        src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/logo_white-09_large-2.png"
-                        alt="Nivasa Logo"
-                        width={280}
-                        height={58}
-                        className="max-w-[280px]"
-                    />
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light uppercase tracking-[0.1em] text-white">
+                        STONES GALLERY
+                    </h1>
+                    <h2 className="text-2xl lg:text-3xl xl:text-4xl font-light italic text-white mt-2">
+                        Classic
+                    </h2>
                 </div>
                 <a
                     href="/pages/our-story"
@@ -63,7 +62,7 @@ const SplitHeroIntroducing = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/classic_contemporary-53-desk_1080x-13.jpg')`,
+            backgroundImage: `url('/imagesfor2ndsection/2.jpeg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
