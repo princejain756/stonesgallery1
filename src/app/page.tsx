@@ -3,6 +3,7 @@ import WelcomeModal from '@/components/sections/welcome-modal';
 import HeroVideo from '@/components/sections/hero-video';
 import SplitHeroIntroducing from '@/components/sections/split-hero-introducing';
 import ServicesHero from '@/components/sections/services-hero';
+import WhereArtMeetsEngineering from '@/components/sections/where-art-meets-engineering';
 import CollectionsGrid from '@/components/sections/collections-grid';
 import Footer from '@/components/sections/footer';
 
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HeroVideo />
       <SplitHeroIntroducing />
       <ServicesHero />
+      <WhereArtMeetsEngineering />
       <CollectionsGrid />
       <Footer />
     </main>
