@@ -1,17 +1,20 @@
+import { ReactNode } from 'react';
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
-import CollectionsGrid from '@/components/sections/collections-grid';
+import CollectionDetail from '@/components/sections/collection-detail';
 
-export default function OurCollectionPage() {
+interface Props {
+  searchParams: { collection?: string };
+  children?: ReactNode;
+}
+
+export default function CollectionPage({ searchParams }: Props) {
+  const collection = searchParams?.collection || 'pistachio';
+
   return (
-    <main className="min-h-screen bg-white text-[#8d8986]">
+    <main className="min-h-screen bg-white">
       <Header />
-      <section className="mx-auto max-w-[1200px] px-5 pt-10 md:pt-16">
-        <h1 className="mb-8 text-center text-2xl uppercase tracking-[0.25em] text-[#333]">
-          Our Collections
-        </h1>
-      </section>
-      <CollectionsGrid />
+      <CollectionDetail slug={collection} />
       <Footer />
     </main>
   );

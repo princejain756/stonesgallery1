@@ -1,7 +1,30 @@
+'use client';
+
+import { FormEvent, useState } from 'react';
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
 
 export default function ContactUsPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const phoneNumber = '919448987711'; // WhatsApp number without +
+    const message = `Hello, I'm ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappURL, '_blank');
+    
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
+  };
+
   return (
     <main className="min-h-screen bg-white text-[#8d8986]">
       <Header />
@@ -13,33 +36,49 @@ export default function ContactUsPage() {
           <div>
             <h2 className="mb-3 text-sm uppercase tracking-[0.2em] text-[#333]">Studio</h2>
             <p className="text-sm leading-7">
-              Stones Gallery, 123 Design Street, New Delhi, India
+              Stones Gallery
               <br />
-              contact@stonesgallery.com
+              <a href="tel:+919448987711" className="hover:text-[#333] transition">
+                +91 94489 87711
+              </a>
               <br />
-              +91 00000 00000
+              <a href="https://wa.me/919448987711" target="_blank" rel="noopener noreferrer" className="hover:text-[#333] transition">
+                WhatsApp: +91 94489 87711
+              </a>
             </p>
           </div>
-          <form className="grid gap-4">
+          <form className="grid gap-4" onSubmit={handleSubmit}>
             <input
               className="border border-[#dcdcdc] bg-white px-3 py-3 text-sm outline-none focus:border-[#333]"
               placeholder="Name"
               aria-label="Name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
             />
             <input
               className="border border-[#dcdcdc] bg-white px-3 py-3 text-sm outline-none focus:border-[#333]"
               placeholder="Email"
               type="email"
               aria-label="Email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
             />
             <textarea
               className="border border-[#dcdcdc] bg-white px-3 py-3 text-sm outline-none focus:border-[#333]"
               placeholder="Message"
               rows={5}
               aria-label="Message"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              required
             />
-            <button className="border border-[#cfcfcf] px-8 py-3 text-xs uppercase tracking-[0.15em] text-[#444] hover:bg-black hover:text-white hover:border-black transition-colors">
-              Send Message
+            <button 
+              type="submit"
+              className="border border-[#cfcfcf] px-8 py-3 text-xs uppercase tracking-[0.15em] text-[#444] hover:bg-black hover:text-white hover:border-black transition-colors"
+            >
+              Send via WhatsApp
             </button>
           </form>
         </div>

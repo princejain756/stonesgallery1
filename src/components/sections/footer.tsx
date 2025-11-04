@@ -52,6 +52,9 @@ const Footer = () => {
           <p className="text-sm uppercase tracking-[0.15em] text-[#999999]">
             OUR WORLD
           </p>
+          <p className="text-xs tracking-[0.1em] text-[#999999] mt-4">
+            By Taruna
+          </p>
         </div>
 
         <nav className="my-12">
