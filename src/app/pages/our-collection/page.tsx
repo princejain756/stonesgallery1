@@ -1,15 +1,27 @@
-import { ReactNode } from 'react';
+'use client';
+
+import { useEffect, useState, ReactNode } from 'react';
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
 import CollectionDetail from '@/components/sections/collection-detail';
 
-interface Props {
-  searchParams: { collection?: string };
-  children?: ReactNode;
-}
+export default function CollectionPage() {
+  const [collection, setCollection] = useState('pistachio');
+  const [isMounted, setIsMounted] = useState(false);
 
-export default function CollectionPage({ searchParams }: Props) {
-  const collection = searchParams?.collection || 'pistachio';
+  useEffect(() => {
+    setIsMounted(true);
+    // Get collection from URL query params
+    const params = new URLSearchParams(window.location.search);
+    const collectionParam = params.get('collection');
+    if (collectionParam) {
+      setCollection(collectionParam);
+    }
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <main className="min-h-screen bg-white">

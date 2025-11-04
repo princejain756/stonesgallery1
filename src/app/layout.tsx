@@ -21,11 +21,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   openGraph: {
     title: "Stones Gallery - Premium Natural Stones & Construction Materials",
     description: "Discover exquisite stone collections at Stones Gallery. We offer high-quality stones for construction, decoration, and more.",
@@ -49,11 +44,6 @@ export const metadata: Metadata = {
     images: ["/Stonesgallery logo.webp"],
     creator: "@stonesgallery",
   },
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
-  },
   robots: {
     index: true,
     follow: true,
@@ -67,6 +57,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
