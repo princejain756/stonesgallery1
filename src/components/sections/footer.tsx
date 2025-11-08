@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-const navLinks = [
-  { href: "/pages/our-story", label: "OUR STORY" },
-  { href: "/pages/our-collection", label: "OUR COLLECTIONS" },
-  { href: "/pages/our-projects", label: "OUR PROJECTS" },
-  { href: "/pages/our-services", label: "OUR SERVICES" },
-];
-
 const socialIcons = [
   { href: 'https://www.instagram.com/miraclestonex24/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/instagram_icon-5.svg', alt: 'Instagram' },
   { href: 'https://m.facebook.com/NivasaHome/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/facebook_icon-6.svg', alt: 'Facebook' },
@@ -44,8 +37,8 @@ const SocialIcon = ({ href, src, alt }: { href: string; src: string; alt: string
 const Footer = () => {
   return (
     <footer className="bg-[#f8f8f8]">
-      <div className="mx-auto max-w-[1200px] px-8 py-16 md:px-5">
-        <div className="text-center">
+      <div className="mx-auto max-w-[1200px] px-8 py-0 md:px-5">
+        <div className="py-12">
           <h2 className="font-display mb-4 text-[2rem] leading-none tracking-[0.3em] text-[#333333]">
             STONES GALLERY
           </h2>
@@ -57,20 +50,41 @@ const Footer = () => {
           </p>
         </div>
 
-        <nav className="my-12">
-          <ul className="grid grid-cols-1 gap-y-6 text-center md:grid-cols-4 md:gap-4">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="text-sm uppercase tracking-[0.1em] text-[#666666] transition-colors duration-300 hover:text-[#333333]"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="grid gap-8 md:grid-cols-3 text-left text-[#4a4a4a] mt-12">
+          <div>
+            <h3 className="text-sm font-semibold tracking-[0.15em] uppercase mb-3">Bengaluru Stone Experts</h3>
+            <p className="text-sm leading-relaxed">
+              Stones Gallery by Dish Impex LLP curates Italian marble, quartzite, Dark Roast granite, pistachio marble,
+              temple sculptures, and custom stone furniture for luxury villas and landmark commercial spaces across Bengaluru.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold tracking-[0.15em] uppercase mb-3">Priority Micro-Markets</h3>
+            <ul className="text-sm space-y-1">
+              <li>Jigani granite hub &amp; stone factory outlets</li>
+              <li>JP Nagar, Jayanagar &amp; Banashankari residences</li>
+              <li>Koramangala, Indiranagar &amp; Whitefield penthouses</li>
+              <li>Electronic City, Sarjapur Road &amp; Yelahanka projects</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold tracking-[0.15em] uppercase mb-3">Pan-India Export Desk</h3>
+            <p className="text-sm leading-relaxed">
+              We export premium granite slabs, onyx, bespoke temple idols, and handcrafted stone furniture to architects,
+              builders, and retailers across India with turnkey logistics support.
+            </p>
+            <ul className="mt-3 text-sm space-y-1">
+              <li>Delhi NCR • Mumbai • Hyderabad • Chennai</li>
+              <li>Pune • Ahmedabad • Kolkata • Kochi • Jaipur</li>
+            </ul>
+            <Link
+              href="/pages/contact-us"
+              className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[#333333] border-b border-[#333333]/40 hover:border-[#333333]"
+            >
+              PLAN A SITE VISIT
+            </Link>
+          </div>
+        </div>
 
         <hr className="my-12 border-t border-[#dddddd]" />
 

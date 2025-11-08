@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WhereArtMeetsEngineering() {
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden text-white md:h-screen">
+    <section className="relative h-screen w-full overflow-hidden text-white">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video

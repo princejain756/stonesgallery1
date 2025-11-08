@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HeroVideo = (): JSX.Element => {
+const HeroVideo = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden text-white">

@@ -1,4 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc'
+import tseslint from '@typescript-eslint/eslint-plugin'
  
 const compat = new FlatCompat({
   // import.meta.dirname is available after Node.js v20.11.0
@@ -11,6 +12,9 @@ const eslintConfig = [
     plugins: ['import'],
   }),
   {
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
     rules: {
       'react/no-unescaped-entities': 'off',
       '@next/next/no-img-element': 'off',

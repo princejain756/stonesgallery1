@@ -55,9 +55,9 @@ const FeaturedCollections: React.FC = () => {
   const currentCollection = featuredCollections[currentIndex];
 
   return (
-    <section className="relative py-0 overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Main Carousel */}
-      <div className="relative h-screen md:h-[700px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-stone-100">
           <Image
@@ -79,6 +79,7 @@ const FeaturedCollections: React.FC = () => {
             <Link href="/pages/our-collection" className="hover:text-stone-300 transition">OUR COLLECTIONS</Link>
             <Link href="/pages/our-projects" className="hover:text-stone-300 transition">OUR PROJECTS</Link>
             <Link href="/pages/our-services" className="hover:text-stone-300 transition">OUR SERVICES</Link>
+            <Link href="/pages/blog" className="hover:text-stone-300 transition">BLOG</Link>
             <Link href="/pages/contact-us" className="hover:text-stone-300 transition">OUR CONTACT</Link>
           </div>
         </nav>

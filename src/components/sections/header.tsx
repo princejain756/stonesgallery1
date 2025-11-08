@@ -28,6 +28,7 @@ const navLinks = [
   { href: '/pages/our-collection', label: 'OUR COLLECTIONS' },
   { href: '/pages/our-projects', label: 'OUR PROJECTS' },
   { href: '/pages/our-services', label: 'OUR SERVICES' },
+  { href: '/pages/blog', label: 'BLOG' },
   { href: '/pages/contact-us', label: 'OUR CONTACT' },
 ];
 

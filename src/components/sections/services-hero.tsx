@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function ServicesHero() {
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden text-white md:h-screen">
+    <section className="relative h-screen w-full overflow-hidden text-white">
       {/* Background media (GIF) */}
       <div className="absolute inset-0 z-0">
         <img

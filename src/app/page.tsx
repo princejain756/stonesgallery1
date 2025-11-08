@@ -5,6 +5,8 @@ import ServicesHero from '@/components/sections/services-hero';
 import WhereArtMeetsEngineering from '@/components/sections/where-art-meets-engineering';
 import LiveTheExperience from '@/components/sections/live-the-experience';
 import FeaturedCollections from '@/components/sections/featured-collections';
+import PanIndiaPresence from '@/components/sections/pan-india-presence';
+import BlogInsights from '@/components/sections/blog-insights';
 import Footer from '@/components/sections/footer';
 
 export default function HomePage() {
@@ -17,6 +19,8 @@ export default function HomePage() {
       <WhereArtMeetsEngineering />
       <LiveTheExperience />
       <FeaturedCollections />
+      <PanIndiaPresence />
+      <BlogInsights />
       <Footer />
     </main>
   );
