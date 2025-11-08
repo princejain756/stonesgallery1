@@ -89,9 +89,9 @@ export default function Header() {
               </div>
               <div className="w-1/3 flex justify-center">
                 <Link href="/" className="text-white hover:text-white/90 transition-colors">
-                  <h1 className="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase">
+                  <span className="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase">
                     Stones Gallery
-                  </h1>
+                  </span>
                 </Link>
               </div>
               <div className="w-1/3 flex justify-end items-center gap-4">
@@ -138,9 +138,9 @@ export default function Header() {
               <Menu className="h-6 w-6 text-white" />
             </button>
             <Link href="/" className="text-white hover:text-white/90 transition-colors">
-              <h1 className="text-lg font-light tracking-[0.15em] uppercase">
+              <span className="text-lg font-light tracking-[0.15em] uppercase">
                 Stones Gallery
-              </h1>
+              </span>
             </Link>
             <div className="flex items-center gap-4">
               <Link href="/account" aria-label="Account" className="group">

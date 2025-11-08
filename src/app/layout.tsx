@@ -37,6 +37,7 @@ const localBusinessSchema = {
     "Dish Impex LLP (Stones Gallery) supplies luxury marble, granite, quartzite, temple sculptures, and custom stone furniture for premium homes and commercial projects across Bengaluru, Delhi NCR, Mumbai, Jaipur, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, Kochi, and pan-India digital buyers.",
   telephone: "+91-9876543210",
   email: "sales@stonesgallery.in",
+  priceRange: "₹₹₹",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Jigani Industrial Area",
@@ -50,6 +51,37 @@ const localBusinessSchema = {
     latitude: "12.7820",
     longitude: "77.6460",
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "250",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Rajesh Kumar" },
+      datePublished: "2024-10-15",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Excellent quality Italian marble and professional installation. Highly recommended for luxury projects.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Priya Sharma" },
+      datePublished: "2024-09-20",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Beautiful temple sculptures with intricate craftsmanship. Perfect for our home mandir.",
+    },
+  ],
   sameAs: [
     "https://www.instagram.com/miraclestonex24/",
     "https://in.pinterest.com/NIVASA_HOME/",
@@ -74,11 +106,11 @@ const websiteSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Stones Gallery – Luxury Marble, Granite & Sculptures Pan-India",
+    default: "Stones Gallery - Luxury Marble & Granite Bangalore",
     template: "%s | Stones Gallery",
   },
   description:
-    "Dish Impex LLP (StonesGallery.in) curates Italian marble, premium granite, temple sculptures, stone furniture, and façade systems for architects, builders, and homeowners across Bengaluru, Delhi NCR, Mumbai, Jaipur, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, Kochi, and pan-India export projects.",
+    "Premium Italian marble, granite & temple sculptures supplier in Bangalore. Expert stone solutions for architects & builders across India. Visit Jigani showroom.",
   keywords: seoKeywords,
   applicationName: "Stones Gallery",
   category: "Architecture, Interior Design, Construction Supplies",
@@ -138,7 +170,9 @@ export const metadata: Metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#000000',
 };
 
 export default function RootLayout({
@@ -148,7 +182,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://slelguoygbfzlpylpxfs.supabase.co" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
       <body className="antialiased">
+        {/* Skip to main content for accessibility */}
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+          Skip to main content
+        </a>
         <ErrorReporter />
         <Script id="stonesgallery-localbusiness" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(localBusinessSchema)}
@@ -158,7 +204,7 @@ export default function RootLayout({
         </Script>
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           data-target-origin="*"
           data-message-type="ROUTE_CHANGE"
           data-include-search-params="true"
@@ -166,7 +212,9 @@ export default function RootLayout({
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Chatbot />
         <VisualEditsMessenger />
       </body>

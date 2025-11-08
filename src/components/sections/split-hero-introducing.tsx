@@ -31,9 +31,9 @@ const SplitHeroIntroducing = () => {
                     Introducing
                 </h3>
                 <div className="mb-8">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light uppercase tracking-[0.1em] text-white">
+                    <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light uppercase tracking-[0.1em] text-white">
                         STONES GALLERY
-                    </h1>
+                    </p>
                     <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light italic text-white mt-2">
                         Classic
                     </h2>
