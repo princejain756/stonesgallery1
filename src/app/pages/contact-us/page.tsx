@@ -45,6 +45,10 @@ export default function ContactUsPage() {
               <a href="https://wa.me/919448987711" target="_blank" rel="noopener noreferrer" className="hover:text-[#333] transition">
                 WhatsApp: +91 94489 87711
               </a>
+              <br />
+              <a href="mailto:dishimpex@gmail.com" className="hover:text-[#333] transition">
+                Email: dishimpex@gmail.com
+              </a>
             </p>
           </div>
           <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -81,6 +85,23 @@ export default function ContactUsPage() {
               Send via WhatsApp
             </button>
           </form>
+        </div>
+      </section>
+      <section className="mx-auto max-w-[900px] px-5 pb-16 md:pb-24">
+        <h2 className="mb-8 text-center text-xl uppercase tracking-[0.25em] text-[#333]">
+          Our Location
+        </h2>
+        <div className="aspect-video w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.0!2d77.638!3d12.785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c9c9c9c9c9%3A0x3bae15c9c9c9c9c9!2zSmlnYW5pLCBCYW5nYWxvcmUsIEthcm5hdGFrYSwgSW5kaWE!5e0!3m2!1sen!2sin!4v1638360000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Stones Gallery Location"
+          ></iframe>
         </div>
       </section>
       <Footer />

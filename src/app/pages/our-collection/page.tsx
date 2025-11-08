@@ -6,7 +6,7 @@ import Footer from '@/components/sections/footer';
 import CollectionDetail from '@/components/sections/collection-detail';
 
 export default function CollectionPage() {
-  const [collection, setCollection] = useState('pistachio');
+  const [collection, setCollection] = useState('dining-table');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

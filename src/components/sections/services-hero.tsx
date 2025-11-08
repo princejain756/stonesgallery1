@@ -16,7 +16,7 @@ export default function ServicesHero() {
         <img
           src="/FROMDREAMTOREALITY/FINAL.gif"
           alt="Services background"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
         {/* Subtle dark overlay above GIF but below text */}
         <div className="absolute inset-0 bg-black/15" />

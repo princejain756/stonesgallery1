@@ -14,7 +14,7 @@ const SplitHeroIntroducing = () => {
   };
 
   return (
-    <section className="bg-background text-white lg:flex">
+    <section className="text-white lg:flex">
       {/* Left Panel */}
       <div id="screen_prev" className="relative w-full lg:w-1/2 h-[60vh] lg:h-screen">
         <div

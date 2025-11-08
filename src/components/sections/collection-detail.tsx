@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, FileText } from 'lucide-react';
 
 interface CollectionData {
   id: string;
@@ -11,48 +11,80 @@ interface CollectionData {
   description: string;
   smallImage: string;
   largeImage: string;
+  pdfUrl?: string;
+  pdfPage?: number;
 }
 
 const collectionsDatabase: Record<string, CollectionData> = {
-  'pistachio': {
+  'dining-table': {
     id: '1',
-    title: 'PISTACHIO',
-    subtitle: 'Premium Collection',
-    description: 'A vibrant and elegant collection featuring rich pistachio tones that bring warmth and sophistication to any space. This collection showcases the natural beauty of premium materials.',
-    smallImage: '/collections/smallpistachio.webp',
-    largeImage: '/collections/pistachiobig.webp'
+    title: 'DINING TABLE',
+    subtitle: 'Premium Furniture',
+    description: 'Exquisite stone dining tables that combine elegance and durability, perfect for creating memorable dining experiences. Each piece is crafted with precision to bring timeless beauty to your dining space.',
+    smallImage: '/collections/stonesgallerycollections/diningtablesmall.webp',
+    largeImage: '/collections/stonesgallerycollections/diningtablebig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 4
   },
-  'red-jasper': {
+  'modern-art': {
     id: '2',
-    title: 'RED JASPER',
-    subtitle: 'Natural Stones',
-    description: 'Stunning red jasper stones that showcase deep, luxurious tones perfect for premium interior designs. Each piece tells a story of natural elegance and timeless beauty.',
-    smallImage: '/collections/smallredjasper.webp',
-    largeImage: '/collections/largeredjasper.webp'
+    title: 'MODERN ART',
+    subtitle: 'Artistic Collection',
+    description: 'Contemporary stone art pieces that bring sophistication and artistic expression to your living spaces. Each sculpture tells a unique story through natural stone.',
+    smallImage: '/collections/stonesgallerycollections/modernartsmall.webp',
+    largeImage: '/collections/stonesgallerycollections/modernartbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 4
   },
-  'dark-roast-aurora-series': {
+  'garden-decor': {
     id: '3',
-    title: 'DARK ROAST AURORA SERIES',
-    subtitle: 'Aurora Collection',
-    description: 'Rich, deep dark roast tones combined with aurora finishes that create a sophisticated and luxurious atmosphere. A perfect blend of modern aesthetics and timeless elegance.',
-    smallImage: '/collections/darkroastauroraseriessmall.webp',
-    largeImage: '/collections/darkroastauroraseries.webp'
+    title: 'GARDEN DECOR',
+    subtitle: 'Outdoor Collection',
+    description: 'Beautiful stone garden decorations that enhance your outdoor spaces with natural elegance and timeless beauty. Perfect for creating serene outdoor environments.',
+    smallImage: '/collections/stonesgallerycollections/gardendecorsmall.webp',
+    largeImage: '/collections/stonesgallerycollections/gardendecorbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 7
   },
-  'judagrey': {
+  'fountain': {
     id: '4',
-    title: 'JUDA GREY',
-    subtitle: 'Grey Collection',
-    description: 'Sophisticated grey tones that bring balance and elegance to any interior space. Perfect for contemporary and classic designs alike.',
-    smallImage: '/collections/smalljudagrey.webp',
-    largeImage: '/collections/largejudagrey.webp'
+    title: 'FOUNTAIN',
+    subtitle: 'Water Features',
+    description: 'Magnificent stone fountains that add a touch of luxury and tranquility to any space. The perfect centerpiece for gardens and courtyards.',
+    smallImage: '/collections/stonesgallerycollections/fountainsmall.webp',
+    largeImage: '/collections/stonesgallerycollections/fountainbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 8
   },
-  'fluting-series': {
+  'idols': {
     id: '5',
-    title: 'FLUTING SERIES',
-    subtitle: 'Textured Collection',
-    description: 'Beautiful fluting finishes that add depth and character to your spaces. Each fluted surface creates stunning visual and tactile experiences.',
-    smallImage: '/collections/flutingseries fluting finishes.webp',
-    largeImage: '/collections/fluttingseries fluting finishes large.webp'
+    title: 'IDOLS',
+    subtitle: 'Spiritual Collection',
+    description: 'Beautifully carved stone idols that bring spiritual elegance and divine presence to your sacred spaces. Each piece is crafted with devotion and attention to detail.',
+    smallImage: '/collections/stonesgallerycollections/idolssmall.webp',
+    largeImage: '/collections/stonesgallerycollections/idolsbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 2
+  },
+  'temples': {
+    id: '6',
+    title: 'TEMPLES',
+    subtitle: 'Sacred Structures',
+    description: 'Exquisite stone temples that create a divine atmosphere in your home. Masterfully crafted with traditional designs and modern craftsmanship.',
+    smallImage: '/collections/stonesgallerycollections/templessmall.webp',
+    largeImage: '/collections/stonesgallerycollections/templesbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 3
+  },
+  'wall-panel': {
+    id: '7',
+    title: 'WALL PANEL',
+    subtitle: 'Decorative Panels',
+    description: 'Stunning stone wall panels featuring intricate chakra designs that add depth, texture, and artistic appeal to any interior space.',
+    smallImage: '/collections/stonesgallerycollections/wallpanelchakrasmall.webp',
+    largeImage: '/collections/stonesgallerycollections/WALLPANELBIG.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 6
   }
 };
 
@@ -60,9 +92,10 @@ interface CollectionDetailProps {
   slug?: string;
 }
 
-const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'pistachio' }) => {
-  const collection = collectionsDatabase[slug] || collectionsDatabase['pistachio'];
+const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-table' }) => {
+  const collection = collectionsDatabase[slug] || collectionsDatabase['dining-table'];
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showPdfViewer, setShowPdfViewer] = useState(false);
 
   const collectionSlugs = Object.keys(collectionsDatabase);
   const currentIndex = collectionSlugs.indexOf(slug);
@@ -72,16 +105,55 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'pistachio' 
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar */}
-      <nav className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-6 flex justify-center gap-12 md:gap-16 text-sm md:text-base tracking-wider">
-          <a href="/pages/our-story" className="hover:text-stone-600 transition">OUR STORY</a>
-          <a href="/pages/our-collection" className="hover:text-stone-600 transition">OUR COLLECTIONS</a>
-          <a href="/pages/our-projects" className="hover:text-stone-600 transition">OUR PROJECTS</a>
-          <a href="/pages/our-services" className="hover:text-stone-600 transition">OUR SERVICES</a>
-          <a href="/pages/contact-us" className="hover:text-stone-600 transition">OUR CONTACT</a>
+      {/* PDF Viewer Modal */}
+      {showPdfViewer && collection.pdfUrl && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
+          <div className="relative w-full h-full max-w-7xl max-h-screen flex flex-col bg-white rounded-lg shadow-2xl">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-4 border-b border-stone-200 bg-stone-50">
+              <div className="flex items-center gap-3">
+                <FileText className="h-5 w-5 text-stone-700" />
+                <h2 className="text-lg md:text-xl font-light tracking-wider uppercase text-stone-800">
+                  {collection.title} Catalog
+                </h2>
+              </div>
+              <button
+                onClick={() => setShowPdfViewer(false)}
+                className="p-2 hover:bg-stone-200 rounded-lg transition-colors group"
+                aria-label="Close PDF viewer"
+              >
+                <X className="h-6 w-6 text-stone-700 group-hover:text-stone-900" />
+              </button>
+            </div>
+            
+            {/* PDF Viewer */}
+            <div className="flex-1 overflow-hidden">
+              <iframe
+                src={`${collection.pdfUrl}#page=${collection.pdfPage || 1}`}
+                className="w-full h-full border-0"
+                title={`${collection.title} PDF Catalog`}
+              />
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="flex items-center justify-between p-4 border-t border-stone-200 bg-stone-50">
+              <a
+                href={collection.pdfUrl}
+                download
+                className="px-6 py-2 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm"
+              >
+                DOWNLOAD PDF
+              </a>
+              <button
+                onClick={() => setShowPdfViewer(false)}
+                className="px-6 py-2 bg-stone-800 text-white hover:bg-stone-700 transition-all duration-300 tracking-wider text-sm"
+              >
+                CLOSE
+              </button>
+            </div>
+          </div>
         </div>
-      </nav>
+      )}
 
       {/* Collection Detail - Split Layout */}
       <section className="relative py-16 md:py-24">
@@ -113,10 +185,22 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'pistachio' 
                 />
               </div>
 
-              {/* Explore Button */}
-              <button className="px-10 py-3 md:py-4 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm md:text-base">
-                EXPLORE MORE
-              </button>
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="px-10 py-3 md:py-4 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm md:text-base">
+                  EXPLORE MORE
+                </button>
+                
+                {collection.pdfUrl && (
+                  <button 
+                    onClick={() => setShowPdfViewer(true)}
+                    className="px-10 py-3 md:py-4 border border-stone-800 bg-stone-800 text-white hover:bg-stone-700 transition-all duration-300 tracking-wider text-sm md:text-base flex items-center justify-center gap-2"
+                  >
+                    <FileText className="h-4 w-4" />
+                    VIEW CATALOG
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Right Side - Large Image */}
@@ -157,10 +241,9 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'pistachio' 
                         src={col.largeImage}
                         alt={col.title}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                     </div>
                     <h4 className="text-lg md:text-xl font-light tracking-widest uppercase group-hover:text-stone-600 transition">
                       {col.title}

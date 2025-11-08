@@ -20,7 +20,7 @@ export default function OurProjectsPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {projects.map((src, i) => (
             <div key={i} className="relative aspect-[4/3] overflow-hidden">
-              <Image src={src} alt="Project" fill className="object-cover" />
+              <Image src={src} alt="Project" fill className="object-contain" />
             </div>
           ))}
         </div>

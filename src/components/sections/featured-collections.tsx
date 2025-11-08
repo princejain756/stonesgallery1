@@ -17,27 +17,27 @@ interface FeaturedCollection {
 const featuredCollections: FeaturedCollection[] = [
   {
     id: '1',
-    title: 'PISTACHIO',
-    subtitle: 'Premium Collection',
-    description: 'A vibrant and elegant collection featuring rich pistachio tones that bring warmth and sophistication to any space.',
-    image: '/collections/pistachiobig.webp',
-    slug: 'pistachio'
+    title: 'DINING TABLE',
+    subtitle: 'Premium Furniture',
+    description: 'Exquisite stone dining tables that combine elegance and durability, perfect for creating memorable dining experiences.',
+    image: '/collections/stonesgallerycollections/diningtablebig.webp',
+    slug: 'dining-table'
   },
   {
     id: '2',
-    title: 'RED JASPER',
-    subtitle: 'Natural Stones',
-    description: 'Stunning red jasper stones that showcase deep, luxurious tones perfect for premium interior designs.',
-    image: '/collections/largeredjasper.webp',
-    slug: 'red-jasper'
+    title: 'MODERN ART',
+    subtitle: 'Artistic Collection',
+    description: 'Contemporary stone art pieces that bring sophistication and artistic expression to your living spaces.',
+    image: '/collections/stonesgallerycollections/modernartbig.webp',
+    slug: 'modern-art'
   },
   {
     id: '3',
-    title: 'DARK ROAST AURORA SERIES',
-    subtitle: 'Aurora Collection',
-    description: 'Rich, deep dark roast tones combined with aurora finishes that create a sophisticated and luxurious atmosphere.',
-    image: '/collections/darkroastauroraseries.webp',
-    slug: 'dark-roast-aurora-series'
+    title: 'GARDEN DECOR',
+    subtitle: 'Outdoor Collection',
+    description: 'Beautiful stone garden decorations that enhance your outdoor spaces with natural elegance and timeless beauty.',
+    image: '/collections/stonesgallerycollections/gardendecorbig.webp',
+    slug: 'garden-decor'
   }
 ];
 
@@ -55,11 +55,11 @@ const FeaturedCollections: React.FC = () => {
   const currentCollection = featuredCollections[currentIndex];
 
   return (
-    <section className="relative bg-white py-0 overflow-hidden">
+    <section className="relative py-0 overflow-hidden">
       {/* Main Carousel */}
       <div className="relative h-screen md:h-[700px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-stone-100">
           <Image
             src={currentCollection.image}
             alt={currentCollection.title}
@@ -69,7 +69,7 @@ const FeaturedCollections: React.FC = () => {
             sizes="100vw"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
         {/* Navigation Bar - Desktop */}
@@ -130,64 +130,6 @@ const FeaturedCollections: React.FC = () => {
               aria-label={`Go to collection ${index + 1}`}
             />
           ))}
-        </div>
-      </div>
-
-      {/* Featured Collections Grid */}
-      <div className="bg-stone-50 py-16 md:py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="mb-12 md:mb-16">
-            <h3 className="text-3xl md:text-4xl font-light tracking-wider mb-4 uppercase">
-              Our Collections
-            </h3>
-            <p className="text-stone-600 text-base md:text-lg tracking-wide">
-              Explore our curated selection of premium stone collections
-            </p>
-          </div>
-
-          {/* Collections Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {featuredCollections.map((collection) => (
-              <Link
-                key={collection.id}
-                href={`/pages/our-collection?collection=${collection.slug}`}
-                className="group"
-              >
-                <div className="relative h-80 md:h-96 mb-4 overflow-hidden rounded-lg shadow-lg">
-                  <Image
-                    src={collection.image}
-                    alt={collection.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl md:text-2xl font-light tracking-widest uppercase group-hover:text-stone-600 transition">
-                    {collection.title}
-                  </h4>
-                  <p className="text-sm md:text-base text-stone-600 tracking-wider">
-                    {collection.subtitle}
-                  </p>
-                  <p className="text-sm text-stone-500 leading-relaxed pt-2">
-                    {collection.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* View All Button */}
-          <div className="mt-12 md:mt-16 text-center">
-            <Link
-              href="/pages/our-collection"
-              className="inline-block px-10 py-3 md:py-4 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm md:text-base"
-            >
-              VIEW ALL COLLECTIONS
-            </Link>
-          </div>
         </div>
       </div>
     </section>

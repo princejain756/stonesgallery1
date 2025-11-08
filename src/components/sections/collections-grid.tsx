@@ -79,12 +79,8 @@ const CollectionTile = ({ collection }: { collection: Collection }) => {
         alt={collection.title}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover transition-all duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-110"
+        className="object-cover transition-all duration-400 ease-in-out group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70" />
-      <h3 className="font-display absolute bottom-8 left-8 text-lg sm:text-xl md:text-[1.75rem] md:leading-[1.3] text-white tracking-[0.05em]">
-        {collection.title}
-      </h3>
     </Link>
   );
 };

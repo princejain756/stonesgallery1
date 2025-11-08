@@ -15,7 +15,7 @@ const HeroVideo = (): JSX.Element => {
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 h-full w-full object-cover z-0"
+        className="absolute inset-0 h-full w-full object-contain z-0"
         style={{ 
           position: 'absolute',
           top: 0,

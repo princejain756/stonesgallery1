@@ -8,9 +8,7 @@ export default function OurServicesPage() {
       <section className="mx-auto max-w-[900px] px-5 py-16 md:py-24 text-center">
         <h1 className="mb-6 text-2xl uppercase tracking-[0.25em] text-[#333]">Our Services</h1>
         <p className="mx-auto max-w-[720px] text-base leading-7">
-          From bespoke furniture to full interior projects, our team crafts
-          highly personalised experiences. Get in touch to explore product
-          customisation, material palettes, and on-site project execution.
+          We are creative and agile. We are responsive and committed to environmentally sustainable products. Stones Gallery offers customized solutions to satisfy customer's requirement and to make their stone dreams come alive. We have our production facility at stone city of Rajasthan – Jaipur and Makrana. Do visit our store to experience our range of stunning products.
         </p>
       </section>
       <Footer />

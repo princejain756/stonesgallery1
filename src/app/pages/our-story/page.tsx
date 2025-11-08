@@ -1,5 +1,6 @@
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
+import JourneyStorytelling from '@/components/sections/journey-storytelling';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,13 +9,13 @@ export default function OurStoryPage() {
     <main className="min-h-screen bg-white text-[#8d8986]">
       <Header />
 
-      <section className="relative h-[70vh] w-full">
-        <Image
-          src="https://cdn.shopify.com/s/files/1/0633/4911/2714/files/our_story-41_1950x.jpg?v=1730018501"
-          alt="Our Story Hero"
-          fill
-          className="object-cover"
-          priority
+      <section className="relative h-[70vh] w-full overflow-hidden">
+        <video
+          src="/ourstory.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-end justify-center pb-12">
@@ -24,9 +25,7 @@ export default function OurStoryPage() {
 
       <section className="mx-auto max-w-[1100px] px-5 py-14 md:py-20">
         <p className="mb-6 text-base leading-7">
-          Stones Gallery is a design house where personalisation meets luxury. This
-          clone page mirrors the layout and typographic feel of the original
-          while using Tailwind for a clean, responsive structure.
+          Stones Gallery by Dish Impex LLP is a design house where personalisation meets luxury. Stones Gallery's Natural Stone Boutique offers unique Statutes, Idols, Wall Claddings, Home Decors, Modern-Arts, Temple & Inlays all crafted from finest quality of natural stones. Discover and explore our exclusive collection at Jigani, Bangalore.
         </p>
         <p className="text-base leading-7">
           Work with us to craft timeless spaces and bespoke furniture pieces.
@@ -41,6 +40,8 @@ export default function OurStoryPage() {
           </Link>
         </div>
       </section>
+
+      <JourneyStorytelling />
 
       <Footer />
     </main>
