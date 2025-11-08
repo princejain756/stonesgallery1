@@ -142,6 +142,7 @@ const Chatbot: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="h-14 w-14 rounded-full bg-stone-800 hover:bg-stone-700 shadow-lg transition-all duration-300 hover:scale-110"
           size="icon"
+          aria-label={isOpen ? "Close chat" : "Open chat"}
         >
           {isOpen ? (
             <X className="h-6 w-6" />
