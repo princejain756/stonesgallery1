@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 
 import { blogPosts } from '@/data/blog-posts';
 
+export const dynamic = 'force-static';
+
 const baseUrl = 'https://stonesgallery.in';
 
 const staticRoutes = [

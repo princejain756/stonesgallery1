@@ -9,7 +9,7 @@ export default function LiveTheExperience() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          className="h-full w-full object-contain"
+          className="h-full w-full object-cover"
           src="/livetheexperiecne.mp4"
           autoPlay
           muted

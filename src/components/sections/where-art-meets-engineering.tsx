@@ -6,7 +6,7 @@ export default function WhereArtMeetsEngineering() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          className="h-full w-full object-contain"
+          className="h-full w-full object-cover"
           src="/whereartmeetsengineering/thisvideo.mp4"
           autoPlay
           muted
