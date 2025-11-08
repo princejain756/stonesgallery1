@@ -4,7 +4,7 @@ import Link from 'next/link';
 const socialIcons = [
   { href: 'https://www.instagram.com/miraclestonex24/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/instagram_icon-5.svg', alt: 'Instagram' },
   { href: 'https://m.facebook.com/NivasaHome/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/facebook_icon-6.svg', alt: 'Facebook' },
-  { href: 'https://www.linkedin.com/company/nivasa-home', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/linkedin_icon-7.svg', alt: 'LinkedIn' },
+  { href: 'https://www.linkedin.com/company/miracle-stone-exports-llp/?originalSubdomain=in', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/linkedin_icon-7.svg', alt: 'LinkedIn' },
   { href: 'https://youtube.com/channel/UCfpaFEH02b2VMOu2I3yQ-Xg', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/youTube_icon-8.svg', alt: 'YouTube' },
   { href: 'https://in.pinterest.com/NIVASA_HOME/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/pinterest_icon-9.svg', alt: 'Pinterest' },
   { href: 'https://www.houzz.in/pro/nivel-nivasa/nivasa', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/houzz_link-10.svg', alt: 'Houzz' },

@@ -1,8 +1,83 @@
+import type { Metadata } from 'next';
+import Script from 'next/script';
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
 import JourneyStorytelling from '@/components/sections/journey-storytelling';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Our Story – Stones Gallery by Dish Impex LLP | Luxury Natural Stone',
+  description:
+    'Discover the journey of Stones Gallery, a premium natural stone boutique in Jigani, Bangalore. We craft bespoke marble idols, temple sculptures, stone furniture, and luxury interiors from the finest natural stones.',
+  keywords: [
+    'stones gallery',
+    'dish impex llp',
+    'natural stone boutique bangalore',
+    'stone gallery jigani',
+    'luxury marble bangalore',
+    'custom temple sculptures',
+    'stone furniture manufacturer',
+    'marble idol manufacturers india',
+  ],
+  alternates: {
+    canonical: '/pages/our-story',
+  },
+  openGraph: {
+    title: 'Our Story – Stones Gallery | Premium Natural Stone Boutique',
+    description:
+      'From Jigani to pan-India, explore how Stones Gallery became a trusted name in luxury marble, temple sculptures, and bespoke stone furniture.',
+    url: 'https://stonesgallery.in/pages/our-story',
+    type: 'website',
+    images: [
+      {
+        url: '/Stonesgallery logo.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Stones Gallery - Luxury Natural Stone Boutique',
+      },
+    ],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://stonesgallery.in',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Our Story',
+      item: 'https://stonesgallery.in/pages/our-story',
+    },
+  ],
+};
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Our Story - Stones Gallery',
+  description:
+    'Stones Gallery by Dish Impex LLP is a design house where personalisation meets luxury. We craft unique statues, idols, wall claddings, home décor, modern arts, temples & inlays from the finest natural stones.',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Stones Gallery by Dish Impex LLP',
+    url: 'https://stonesgallery.in',
+    logo: 'https://stonesgallery.in/Stonesgallery logo.webp',
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Jigani, Bangalore',
+    },
+    description:
+      'Premium natural stone boutique offering luxury marble, granite, temple sculptures, stone furniture, and custom stone art.',
+  },
+};
 
 export default function OurStoryPage() {
   return (
@@ -44,6 +119,13 @@ export default function OurStoryPage() {
       <JourneyStorytelling />
 
       <Footer />
+      
+      <Script id="our-story-breadcrumb" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(breadcrumbSchema)}
+      </Script>
+      <Script id="our-story-about" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(aboutSchema)}
+      </Script>
     </main>
   );
 }

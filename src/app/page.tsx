@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import Header from '@/components/sections/header';
 import HeroVideo from '@/components/sections/hero-video';
 import SplitHeroIntroducing from '@/components/sections/split-hero-introducing';
@@ -8,6 +9,55 @@ import FeaturedCollections from '@/components/sections/featured-collections';
 import PanIndiaPresence from '@/components/sections/pan-india-presence';
 import BlogInsights from '@/components/sections/blog-insights';
 import Footer from '@/components/sections/footer';
+
+// Enhanced homepage structured data
+const homepageOfferCatalog = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Stones Gallery Product & Service Catalog',
+  description: 'Comprehensive stone solutions for luxury residential and commercial projects',
+  itemListElement: [
+    {
+      '@type': 'Product',
+      position: 1,
+      name: 'Italian Marble',
+      description: 'Premium Calacatta, Panda White, and luxury imported marble slabs',
+      brand: { '@type': 'Brand', name: 'Stones Gallery' },
+      category: 'Natural Stone',
+    },
+    {
+      '@type': 'Product',
+      position: 2,
+      name: 'Granite Slabs',
+      description: 'Dark Roast, Red Jasper, and calibrated granite for countertops and flooring',
+      brand: { '@type': 'Brand', name: 'Stones Gallery' },
+      category: 'Natural Stone',
+    },
+    {
+      '@type': 'Product',
+      position: 3,
+      name: 'Temple Sculptures',
+      description: 'Hand-carved marble idols, deity sculptures, and temple accessories',
+      brand: { '@type': 'Brand', name: 'Stones Gallery' },
+      category: 'Sculpture & Art',
+    },
+    {
+      '@type': 'Product',
+      position: 4,
+      name: 'Stone Furniture',
+      description: 'Custom marble dining tables, wash basins, and garden benches',
+      brand: { '@type': 'Brand', name: 'Stones Gallery' },
+      category: 'Furniture',
+    },
+    {
+      '@type': 'Service',
+      position: 5,
+      name: 'Exterior Cladding',
+      description: 'Façade engineering and stone cladding for luxury villas',
+      provider: { '@type': 'Organization', name: 'Dish Impex LLP' },
+    },
+  ],
+};
 
 export default function HomePage() {
   return (
@@ -22,6 +72,10 @@ export default function HomePage() {
       <PanIndiaPresence />
       <BlogInsights />
       <Footer />
+      
+      <Script id="homepage-offer-catalog" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homepageOfferCatalog)}
+      </Script>
     </main>
   );
 }

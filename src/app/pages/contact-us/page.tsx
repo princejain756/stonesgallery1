@@ -1,8 +1,13 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { FormEvent, useState } from 'react';
+import Script from 'next/script';
 import Header from '@/components/sections/header';
 import Footer from '@/components/sections/footer';
+
+// Note: For client components, we'll add metadata via a separate metadata file
+// This is a placeholder showing what metadata would be used
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
