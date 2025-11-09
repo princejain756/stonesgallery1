@@ -95,16 +95,29 @@ export default function ContactUsPage() {
         </h2>
         <div className="aspect-video w-full">
           <iframe
-            src="https://www.google.com/maps/d/embed?mid=RDzzBg5y6OyOcZ28A"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2269827891867!2d77.64107197507637!3d12.868562287420844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b008975f2b7%3A0x3f6acb25fc6bb8ea!2sMiracle%20Stonex!5e0!3m2!1sen!2sin!4v1699500000000!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Stones Gallery Location"
+            title="Stones Gallery Location - Miracle Stonex, Jigani"
           ></iframe>
         </div>
+        <p className="text-center text-[#8d8986] mt-6 text-sm">
+          <strong>Miracle Stonex</strong><br />
+          16/2, Bannerghatta Rd, Malle Nalsandra, Begihalli, Jigani<br />
+          Bengaluru, Karnataka 560105<br />
+          <a 
+            href="https://www.google.com/maps/place/Miracle+Stonex/@12.8685623,77.6410720,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae6b008975f2b7:0x3f6acb25fc6bb8ea!8m2!3d12.8685623!4d77.6436469!16s%2Fg%2F11hbghxkxz"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#333] hover:underline mt-2 inline-block"
+          >
+            Open in Google Maps →
+          </a>
+        </p>
       </section>
     </main>
   );

@@ -72,18 +72,6 @@ const FeaturedCollections: React.FC = () => {
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
-        {/* Navigation Bar - Desktop */}
-        <nav className="absolute top-0 left-0 right-0 z-20 hidden md:block px-10 py-6">
-          <div className="flex justify-center gap-16 text-white text-sm tracking-wider">
-            <Link href="/pages/our-story" className="hover:text-stone-300 transition">OUR STORY</Link>
-            <Link href="/pages/our-collection" className="hover:text-stone-300 transition">OUR COLLECTIONS</Link>
-            <Link href="/pages/our-projects" className="hover:text-stone-300 transition">OUR PROJECTS</Link>
-            <Link href="/pages/our-services" className="hover:text-stone-300 transition">OUR SERVICES</Link>
-            <Link href="/pages/blog" className="hover:text-stone-300 transition">BLOG</Link>
-            <Link href="/pages/contact-us" className="hover:text-stone-300 transition">OUR CONTACT</Link>
-          </div>
-        </nav>
-
         {/* Content */}
         <div className="relative z-10 text-center text-white px-6 md:px-12">
           <h2 className="text-4xl md:text-6xl font-light tracking-widest mb-6 uppercase">

@@ -151,7 +151,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Stones Gallery by Dish Impex LLP. All rights reserved.
           </p>
           <p className="text-xs text-[#999999] mt-2">
-            Premium Marble, Granite & Temple Sculptures | Jaipur, Rajasthan
+            Premium Marble, Granite & Temple Sculptures | Bengaluru Karnataka
+          </p>
+          <p className="text-xs text-[#999999] mt-4">
+            Powered by <a href="https://maninfini.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#666666] transition-colors">Maninfini Automation</a>
           </p>
         </div>
       </div>
