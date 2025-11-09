@@ -12,7 +12,7 @@ const socialLinks = [
     alt: 'Instagram',
   },
   {
-    href: 'https://in.pinterest.com/NIVASA_HOME/',
+    href: 'https://in.pinterest.com/search/pins/?q=stones%20gallery&rs=typed',
     src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/pinterest_icon_white-3.svg',
     alt: 'Pinterest',
   },
@@ -28,7 +28,6 @@ const navLinks = [
   { href: '/pages/our-collection', label: 'OUR COLLECTIONS' },
   { href: '/pages/our-projects', label: 'OUR PROJECTS' },
   { href: '/pages/our-services', label: 'OUR SERVICES' },
-  { href: '/pages/blog', label: 'BLOG' },
   { href: '/pages/contact-us', label: 'OUR CONTACT' },
 ];
 
@@ -88,10 +87,14 @@ export default function Header() {
                 </ul>
               </div>
               <div className="w-1/3 flex justify-center">
-                <Link href="/" className="text-white hover:text-white/90 transition-colors">
-                  <span className="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase">
-                    Stones Gallery
-                  </span>
+                <Link href="/">
+                  <Image
+                    src="/Stonesgallery logo.webp"
+                    alt="Stones Gallery"
+                    width={200}
+                    height={50}
+                    className="object-contain"
+                  />
                 </Link>
               </div>
               <div className="w-1/3 flex justify-end items-center gap-4">
@@ -137,10 +140,14 @@ export default function Header() {
             <button onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
               <Menu className="h-6 w-6 text-white" />
             </button>
-            <Link href="/" className="text-white hover:text-white/90 transition-colors">
-              <span className="text-lg font-light tracking-[0.15em] uppercase">
-                Stones Gallery
-              </span>
+            <Link href="/">
+              <Image
+                src="/Stonesgallery logo.webp"
+                alt="Stones Gallery"
+                width={120}
+                height={30}
+                className="object-contain"
+              />
             </Link>
             <div className="flex items-center gap-4">
               <Link href="/account" aria-label="Account" className="group">

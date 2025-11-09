@@ -86,7 +86,7 @@ const localBusinessSchema = {
   ],
   sameAs: [
     "https://www.instagram.com/miraclestonex24/",
-    "https://in.pinterest.com/NIVASA_HOME/",
+    "https://in.pinterest.com/search/pins/?q=stones%20gallery&rs=typed",
     "https://m.facebook.com/NivasaHome/",
   ],
   areaServed: servedLocations,
