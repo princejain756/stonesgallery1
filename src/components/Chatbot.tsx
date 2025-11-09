@@ -39,7 +39,7 @@ const Chatbot: React.FC = () => {
     } else if (mode === 'phone') {
       window.open('tel:+919876543210');
     } else if (mode === 'email') {
-      window.open('mailto:info@stonesgallery.in');
+      window.open('mailto:dishimpex@gmail.com');
     }
   };
 
@@ -80,7 +80,7 @@ const Chatbot: React.FC = () => {
     }
 
     if (message.includes('contact') || message.includes('phone') || message.includes('email')) {
-      return 'You can reach us at:\n📞 Phone: [Your Phone Number]\n📧 Email: info@stonesgallery.in\n🌐 Website: stonesgallery.in\n\nOur team will be happy to assist you!';
+      return 'You can reach us at:\n📞 Phone: [Your Phone Number]\n📧 Email: dishimpex@gmail.com\n🌐 Website: stonesgallery.in\n\nOur team will be happy to assist you!';
     }
 
     if (message.includes('project') || message.includes('construction') || message.includes('building')) {
