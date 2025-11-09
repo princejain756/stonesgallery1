@@ -7,6 +7,7 @@ export const dynamic = 'force-static';
 const baseUrl = 'https://stonesgallery.in';
 
 const staticRoutes = [
+  // Core pages
   { path: '/', priority: 1.0, changeFrequency: 'daily' as const },
   { path: '/pages/our-story', priority: 0.9, changeFrequency: 'monthly' as const },
   { path: '/pages/our-collection', priority: 0.95, changeFrequency: 'weekly' as const },
@@ -14,6 +15,15 @@ const staticRoutes = [
   { path: '/pages/our-services', priority: 0.9, changeFrequency: 'monthly' as const },
   { path: '/pages/contact-us', priority: 0.85, changeFrequency: 'monthly' as const },
   { path: '/pages/blog', priority: 0.85, changeFrequency: 'weekly' as const },
+  
+  // SEO & Trust pages
+  { path: '/pages/faq', priority: 0.9, changeFrequency: 'monthly' as const },
+  { path: '/pages/about', priority: 0.85, changeFrequency: 'monthly' as const },
+  { path: '/pages/privacy-policy', priority: 0.7, changeFrequency: 'yearly' as const },
+  { path: '/pages/terms-of-service', priority: 0.7, changeFrequency: 'yearly' as const },
+  
+  // Location pages for local SEO
+  { path: '/pages/locations/jaipur', priority: 0.85, changeFrequency: 'monthly' as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

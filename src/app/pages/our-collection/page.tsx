@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
-import Header from '@/components/sections/header';
-import Footer from '@/components/sections/footer';
 import CollectionDetail from '@/components/sections/collection-detail';
 
 export default function CollectionPage() {
@@ -25,9 +23,7 @@ export default function CollectionPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Header />
       <CollectionDetail slug={collection} />
-      <Footer />
     </main>
   );
 }

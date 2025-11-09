@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import Header from '@/components/sections/header';
 import HeroVideo from '@/components/sections/hero-video';
 import SplitHeroIntroducing from '@/components/sections/split-hero-introducing';
 import ServicesHero from '@/components/sections/services-hero';
@@ -8,7 +7,6 @@ import LiveTheExperience from '@/components/sections/live-the-experience';
 import FeaturedCollections from '@/components/sections/featured-collections';
 import PanIndiaPresence from '@/components/sections/pan-india-presence';
 import BlogInsights from '@/components/sections/blog-insights';
-import Footer from '@/components/sections/footer';
 
 // Enhanced homepage structured data
 const homepageOfferCatalog = {
@@ -62,7 +60,6 @@ const homepageOfferCatalog = {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <HeroVideo />
       <SplitHeroIntroducing />
       <ServicesHero />
@@ -71,7 +68,6 @@ export default function HomePage() {
       <FeaturedCollections />
       <PanIndiaPresence />
       <BlogInsights />
-      <Footer />
       
       <Script id="homepage-offer-catalog" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homepageOfferCatalog)}

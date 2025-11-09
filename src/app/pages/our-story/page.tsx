@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import Header from '@/components/sections/header';
-import Footer from '@/components/sections/footer';
 import JourneyStorytelling from '@/components/sections/journey-storytelling';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -82,7 +80,6 @@ const aboutSchema = {
 export default function OurStoryPage() {
   return (
     <main className="min-h-screen bg-white text-[#8d8986]">
-      <Header />
 
       <section className="relative h-[70vh] w-full overflow-hidden">
         <video
@@ -118,7 +115,6 @@ export default function OurStoryPage() {
 
       <JourneyStorytelling />
 
-      <Footer />
       
       <Script id="our-story-breadcrumb" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(breadcrumbSchema)}

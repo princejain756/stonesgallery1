@@ -98,6 +98,62 @@ const Footer = () => {
             ))}
           </div>
         </div>
+
+        <hr className="my-12 border-t border-[#dddddd]" />
+
+        {/* Footer Links */}
+        <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+          <div>
+            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase mb-4 text-[#333333]">Company</h4>
+            <ul className="space-y-2 text-sm text-[#666666]">
+              <li><Link href="/pages/about" className="hover:text-[#333333] transition-colors">About Us</Link></li>
+              <li><Link href="/pages/our-story" className="hover:text-[#333333] transition-colors">Our Story</Link></li>
+              <li><Link href="/pages/our-projects" className="hover:text-[#333333] transition-colors">Projects</Link></li>
+              <li><Link href="/pages/contact-us" className="hover:text-[#333333] transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase mb-4 text-[#333333]">Products</h4>
+            <ul className="space-y-2 text-sm text-[#666666]">
+              <li><Link href="/pages/our-collection" className="hover:text-[#333333] transition-colors">Collections</Link></li>
+              <li><Link href="/pages/our-services" className="hover:text-[#333333] transition-colors">Services</Link></li>
+              <li><Link href="/pages/blog" className="hover:text-[#333333] transition-colors">Stone Guides</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase mb-4 text-[#333333]">Locations</h4>
+            <ul className="space-y-2 text-sm text-[#666666]">
+              <li><Link href="/pages/locations/jaipur" className="hover:text-[#333333] transition-colors">Jaipur Factory</Link></li>
+              <li className="text-xs">
+                <strong>Bengaluru Locations:</strong><br />
+                Miracle Stonex, 16/2, Bannerghatta Rd,<br />
+                Malle Nalsandra, Begihalli, Jigani,<br />
+                Karnataka 560105
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase mb-4 text-[#333333]">Support</h4>
+            <ul className="space-y-2 text-sm text-[#666666]">
+              <li><Link href="/pages/faq" className="hover:text-[#333333] transition-colors">FAQ</Link></li>
+              <li><Link href="/pages/privacy-policy" className="hover:text-[#333333] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/pages/terms-of-service" className="hover:text-[#333333] transition-colors">Terms of Service</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-[#dddddd] pt-8 pb-8 text-center">
+          <p className="text-xs text-[#999999] tracking-[0.1em]">
+            © {new Date().getFullYear()} Stones Gallery by Dish Impex LLP. All rights reserved.
+          </p>
+          <p className="text-xs text-[#999999] mt-2">
+            Premium Marble, Granite & Temple Sculptures | Jaipur, Rajasthan
+          </p>
+        </div>
       </div>
     </footer>
   );

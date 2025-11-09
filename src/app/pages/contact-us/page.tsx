@@ -3,8 +3,6 @@
 import type { Metadata } from 'next';
 import { FormEvent, useState } from 'react';
 import Script from 'next/script';
-import Header from '@/components/sections/header';
-import Footer from '@/components/sections/footer';
 
 // Note: For client components, we'll add metadata via a separate metadata file
 // This is a placeholder showing what metadata would be used
@@ -32,7 +30,6 @@ export default function ContactUsPage() {
 
   return (
     <main className="min-h-screen bg-white text-[#8d8986]">
-      <Header />
       <section className="mx-auto max-w-[900px] px-5 py-16 md:py-24">
         <h1 className="mb-8 text-center text-2xl uppercase tracking-[0.25em] text-[#333]">
           Our Contact
@@ -98,7 +95,7 @@ export default function ContactUsPage() {
         </h2>
         <div className="aspect-video w-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.0!2d77.638!3d12.785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c9c9c9c9c9%3A0x3bae15c9c9c9c9c9!2zSmlnYW5pLCBCYW5nYWxvcmUsIEthcm5hdGFrYSwgSW5kaWE!5e0!3m2!1sen!2sin!4v1638360000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/d/embed?mid=RDzzBg5y6OyOcZ28A"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -109,7 +106,6 @@ export default function ContactUsPage() {
           ></iframe>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

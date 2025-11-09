@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
-import Header from '@/components/sections/header';
-import Footer from '@/components/sections/footer';
 import { panIndiaCoverage } from "@/data/pan-india-coverage";
 
 const services = [
@@ -125,7 +123,6 @@ export const metadata: Metadata = {
 export default function OurServicesPage() {
   return (
     <main className="min-h-screen bg-white text-[#4c4c4c]">
-      <Header />
       <section className="mx-auto max-w-4xl px-5 py-16 md:py-24 text-center">
         <p className="text-xs uppercase tracking-[0.4em] text-[#a07858]">Dish Impex LLP • Stones Gallery</p>
         <h1 className="mt-4 text-3xl md:text-4xl uppercase tracking-[0.25em] text-[#1f1d1b]">
@@ -217,7 +214,6 @@ export default function OurServicesPage() {
           Email sales@stonesgallery.in or WhatsApp +91 90356 64747 for granite, marble, idol, or export requests. We revert within 12 working hours.
         </p>
       </section>
-      <Footer />
       <Script id="stonesgallery-service-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(serviceSchema)}
       </Script>

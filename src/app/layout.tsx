@@ -5,6 +5,8 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Chatbot from "@/components/Chatbot";
 import Script from "next/script";
 import { seoKeywords, panIndiaCities, bengaluruHubs } from "@/lib/seo-keywords";
+import Header from "@/components/sections/header";
+import Footer from "@/components/sections/footer";
 
 const siteUrl = "https://stonesgallery.in";
 const servedLocations = Array.from(
@@ -196,6 +198,7 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
           Skip to main content
         </a>
+        <Header />
         <ErrorReporter />
         <Script id="stonesgallery-localbusiness" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(localBusinessSchema)}
@@ -217,6 +220,7 @@ export default function RootLayout({
         <main id="main-content">
           {children}
         </main>
+        <Footer />
         <Chatbot />
         <VisualEditsMessenger />
       </body>
