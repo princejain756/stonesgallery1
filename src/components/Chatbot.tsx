@@ -32,13 +32,14 @@ const Chatbot: React.FC = () => {
   }, [messages]);
 
   const handleCategorySelect = (mode: ChatMode, title: string) => {
-    setChatMode(mode);
-    
     if (mode === 'whatsapp') {
-      window.open('https://wa.me/919876543210?text=Hello%20Stones%20Gallery', '_blank');
+      // Show chat interface for WhatsApp
+      setChatMode('whatsapp');
     } else if (mode === 'phone') {
+      // Directly open phone dialer
       window.open('tel:+919876543210');
     } else if (mode === 'email') {
+      // Directly open email
       window.open('mailto:dishimpex@gmail.com');
     }
   };
@@ -101,30 +102,12 @@ const Chatbot: React.FC = () => {
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      text: inputValue,
-      sender: 'user',
-      timestamp: new Date(),
-    };
-
-    setMessages(prev => [...prev, userMessage]);
+    // Open WhatsApp with the typed message
+    const encodedMessage = encodeURIComponent(inputValue);
+    window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+    
+    // Reset input
     setInputValue('');
-    setIsTyping(true);
-
-    // Simulate bot typing delay
-    setTimeout(() => {
-      const botResponse = getBotResponse(inputValue);
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: botResponse,
-        sender: 'bot',
-        timestamp: new Date(),
-      };
-
-      setMessages(prev => [...prev, botMessage]);
-      setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -241,61 +224,12 @@ const Chatbot: React.FC = () => {
             </div>
           ) : (
             <>
-              {/* Messages */}
-              <ScrollArea className="flex-1 p-4">
-                <div className="space-y-4">
-                  {messages.map((message) => (
-                    <div
-                      key={message.id}
-                      className={`flex gap-3 ${
-                        message.sender === 'user' ? 'justify-end' : 'justify-start'
-                      }`}
-                    >
-                      {message.sender === 'bot' && (
-                        <div className="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <Bot className="h-3 w-3 text-stone-600" />
-                        </div>
-                      )}
-                      <div
-                        className={`max-w-[70%] p-3 rounded-lg text-sm ${
-                          message.sender === 'user'
-                            ? 'bg-stone-800 text-white'
-                            : 'bg-stone-100 text-stone-800'
-                        }`}
-                      >
-                        <p className="whitespace-pre-line">{message.text}</p>
-                        <p className="text-xs mt-1 opacity-70">
-                          {message.timestamp.toLocaleTimeString([], {
-                            hour: '2-digit',
-                            minute: '2-digit',
-                          })}
-                        </p>
-                      </div>
-                      {message.sender === 'user' && (
-                        <div className="w-6 h-6 bg-stone-800 rounded-full flex items-center justify-center flex-shrink-0">
-                          <User className="h-3 w-3 text-white" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-
-                  {isTyping && (
-                    <div className="flex gap-3 justify-start">
-                      <div className="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot className="h-3 w-3 text-stone-600" />
-                      </div>
-                      <div className="bg-stone-100 p-3 rounded-lg">
-                        <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-stone-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-stone-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-stone-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div ref={messagesEndRef} />
-              </ScrollArea>
+              {/* WhatsApp Input */}
+              <div className="flex-1 p-6 flex flex-col justify-center items-center text-center">
+                <MessageSquare className="h-12 w-12 text-green-500 mb-4" />
+                <h3 className="text-lg font-semibold text-stone-900 mb-2">Start WhatsApp Chat</h3>
+                <p className="text-sm text-stone-600 mb-6">Type your message below and we'll open WhatsApp for you to continue the conversation.</p>
+              </div>
 
               {/* Input */}
               <div className="p-4 border-t border-stone-200">
@@ -306,13 +240,12 @@ const Chatbot: React.FC = () => {
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
                     className="flex-1 text-sm"
-                    disabled={isTyping}
                   />
                   <Button
                     onClick={handleSendMessage}
-                    disabled={!inputValue.trim() || isTyping}
+                    disabled={!inputValue.trim()}
                     size="sm"
-                    className="bg-stone-800 hover:bg-stone-700"
+                    className="bg-green-600 hover:bg-green-700"
                   >
                     <Send className="h-4 w-4" />
                   </Button>
