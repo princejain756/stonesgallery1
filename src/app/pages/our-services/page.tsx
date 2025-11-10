@@ -103,7 +103,6 @@ export default function OurServicesPage() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-              <p className="text-lg font-medium">Jaipur Production Facility</p>
             </div>
           </div>
           <div className="relative h-[400px] overflow-hidden">
@@ -115,7 +114,6 @@ export default function OurServicesPage() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-              <p className="text-lg font-medium">Makrana Production Facility</p>
             </div>
           </div>
         </div>

@@ -40,14 +40,11 @@ const HeroVideo = () => {
       {/* Content Layer */}
       <div className="relative z-20 flex h-full flex-col items-center justify-center p-5">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.25em] leading-none mb-4">
-            Stones Gallery - Premium Marble & Granite Supplier Bangalore
-          </h1>
-          <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-[0.2em] leading-tight" aria-label="World of Stones Gallery">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-[0.2em] leading-tight" aria-label="World of Stones Gallery">
             <span className="block mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">WORLD</span>
             <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif mb-4 block">Of</span>
             <span className="block mb-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">STONES GALLERY</span>
-          </p>
+          </h1>
         </div>
 
         <Link
