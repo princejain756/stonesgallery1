@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X, FileText } from 'lucide-react';
+import WallPanelGallery from './wall-panel-gallery';
+import MarbleSinksGallery from './marble-sinks-gallery';
 
 interface CollectionData {
   id: string;
@@ -140,6 +142,16 @@ const collectionsDatabase: Record<string, CollectionData> = {
       '/Customised Temples/ganesh harmony sanctuary.jpg',
       '/Customised Temples/lotus entrance mandap.jpg',
     ]
+  },
+  'marble-sinks': {
+    id: '11',
+    title: 'MARBLE SINKS',
+    subtitle: 'Premium Bathroom Fixtures',
+    description: 'Exquisite marble sinks crafted from premium marble with elegant designs. Perfect for modern and traditional bathrooms, adding luxury and sophistication to your spaces.',
+    smallImage: '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0001.jpg',
+    largeImage: '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0020.jpg',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 5
   }
 };
 
@@ -151,6 +163,8 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
   const collection = collectionsDatabase[slug] || collectionsDatabase['dining-table'];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showPdfViewer, setShowPdfViewer] = useState(false);
+  const [showWallPanelGallery, setShowWallPanelGallery] = useState(false);
+  const [showMarbleSinksGallery, setShowMarbleSinksGallery] = useState(false);
 
   const collectionSlugs = Object.keys(collectionsDatabase);
   const currentIndex = collectionSlugs.indexOf(slug);
@@ -158,8 +172,30 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
   const nextCollection = collectionSlugs[(currentIndex + 1) % collectionSlugs.length];
   const prevCollection = collectionSlugs[(currentIndex - 1 + collectionSlugs.length) % collectionSlugs.length];
 
+  const handleViewCatalog = () => {
+    if (slug === 'wall-panel') {
+      setShowWallPanelGallery(true);
+    } else if (slug === 'marble-sinks') {
+      setShowMarbleSinksGallery(true);
+    } else if (collection.pdfUrl) {
+      setShowPdfViewer(true);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Wall Panel Gallery */}
+      <WallPanelGallery 
+        isOpen={showWallPanelGallery} 
+        onClose={() => setShowWallPanelGallery(false)} 
+      />
+
+      {/* Marble Sinks Gallery */}
+      <MarbleSinksGallery 
+        isOpen={showMarbleSinksGallery} 
+        onClose={() => setShowMarbleSinksGallery(false)} 
+      />
+
       {/* PDF Viewer Modal */}
       {showPdfViewer && collection.pdfUrl && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
@@ -235,7 +271,7 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
                   src={collection.smallImage}
                   alt={`${collection.title} - Small`}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-contain hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -248,7 +284,7 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
                 
                 {collection.pdfUrl && (
                   <button 
-                    onClick={() => setShowPdfViewer(true)}
+                    onClick={handleViewCatalog}
                     className="px-10 py-3 md:py-4 border border-stone-800 bg-stone-800 text-white hover:bg-stone-700 transition-all duration-300 tracking-wider text-sm md:text-base flex items-center justify-center gap-2"
                   >
                     <FileText className="h-4 w-4" />
@@ -264,7 +300,7 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
                 src={collection.largeImage}
                 alt={collection.title}
                 fill
-                className={`object-cover transition-all duration-700 ${
+                className={`object-contain transition-all duration-700 ${
                   imageLoaded ? 'scale-100 blur-0' : 'scale-110 blur-sm'
                 }`}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -293,7 +329,7 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
                       src={image}
                       alt={`${collection.title} - Gallery ${index + 1}`}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                   </div>

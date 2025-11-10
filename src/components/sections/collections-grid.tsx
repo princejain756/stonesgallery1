@@ -68,6 +68,12 @@ const collectionsData: Collection[] = [
     imageUrl: "/collections/stonesgallerycollections/WALLPANELBIG.webp",
     heightClass: "h-[500px]",
     slug: "wall-panel"
+  },
+  {
+    title: "MARBLE SINKS",
+    imageUrl: "/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0020.jpg",
+    heightClass: "h-[400px]",
+    slug: "marble-sinks"
   }
 ];
 
