@@ -7,6 +7,8 @@ import Script from "next/script";
 import { seoKeywords, panIndiaCities, bengaluruHubs } from "@/lib/seo-keywords";
 import Header from "@/components/sections/header";
 import Footer from "@/components/sections/footer";
+import AuthProvider from "@/components/AuthProvider";
+import { Toaster } from "sonner";
 
 const siteUrl = "https://stonesgallery.in";
 const servedLocations = Array.from(
@@ -194,35 +196,38 @@ export default function RootLayout({
         <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://slelguoygbfzlpylpxfs.supabase.co https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; connect-src 'self' https://slelguoygbfzlpylpxfs.supabase.co https://www.google-analytics.com; frame-src 'self' https://www.youtube.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';" />
       </head>
       <body className="antialiased">
-        {/* Skip to main content for accessibility */}
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
-          Skip to main content
-        </a>
-        <Header />
-        <ErrorReporter />
-        <Script id="stonesgallery-localbusiness" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify(localBusinessSchema)}
-        </Script>
-        <Script id="stonesgallery-website" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify(websiteSchema)}
-        </Script>
-        <Script
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-          strategy="lazyOnload"
-          defer
-          data-target-origin="*"
-          data-message-type="ROUTE_CHANGE"
-          data-include-search-params="true"
-          data-only-in-iframe="true"
-          data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
-        />
-        <main id="main-content">
-          {children}
-        </main>
-        <Footer />
-        <Chatbot />
-        <VisualEditsMessenger />
+        <AuthProvider>
+          {/* Skip to main content for accessibility */}
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+            Skip to main content
+          </a>
+          <Header />
+          <ErrorReporter />
+          <Script id="stonesgallery-localbusiness" type="application/ld+json" strategy="beforeInteractive">
+            {JSON.stringify(localBusinessSchema)}
+          </Script>
+          <Script id="stonesgallery-website" type="application/ld+json" strategy="beforeInteractive">
+            {JSON.stringify(websiteSchema)}
+          </Script>
+          <Script
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
+            strategy="lazyOnload"
+            defer
+            data-target-origin="*"
+            data-message-type="ROUTE_CHANGE"
+            data-include-search-params="true"
+            data-only-in-iframe="true"
+            data-debug="true"
+            data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
+          />
+          <main id="main-content">
+            {children}
+          </main>
+          <Footer />
+          <Chatbot />
+          <VisualEditsMessenger />
+          <Toaster richColors position="top-center" />
+        </AuthProvider>
       </body>
     </html>
   );

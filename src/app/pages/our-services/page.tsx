@@ -1,224 +1,225 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-
-import { panIndiaCoverage } from "@/data/pan-india-coverage";
-
-const services = [
-  {
-    title: 'Luxury Marble & Granite Procurement',
-    description:
-      'Italian marble, pistachio marble, quartzite, and exotic granites sourced from vetted quarries with moisture and thickness reports.',
-    deliverables: ['Calacatta, Panda White, Taj Mahal quartzite', 'Book-matching & slab scanning', 'Moisture + polish QA reports'],
-    keywords: ['italian marble bangalore', 'luxury marble bangalore', 'granite slabs bangalore'],
-  },
-  {
-    title: 'Temple Sculptures & Marble Idols',
-    description:
-      'Hand-carved idols, temple accessories, and custom mandir architecture produced in Jigani with vastu compliance and export-ready packaging.',
-    deliverables: ['Clay maquettes + CAD reviews', 'Gemstone/metal inlay', 'On-site pran pratishtha support'],
-    keywords: ['temple sculptures bangalore', 'marble idols bangalore', 'mandir marble murti bangalore'],
-  },
-  {
-    title: 'Custom Stone Furniture & Wash Basins',
-    description:
-      'Dining tables, sculptural benches, stone bathtubs, and wash basins engineered for villas, resorts, and penthouses.',
-    deliverables: ['Finite element balancing', 'Nano-sealed finishes', 'Installation-ready hardware kits'],
-    keywords: ['custom stone furniture india', 'granite dining table bangalore', 'stone wash basin bangalore'],
-  },
-  {
-    title: 'Exterior Cladding & Façade Engineering',
-    description:
-      'Ventilated façades, elevation tiles, driveway friendly granites, and parking decks designed for Bengaluru’s monsoons.',
-    deliverables: ['Shop drawings & anchor layouts', 'Factory sealing & texture matching', 'Maintenance manuals'],
-    keywords: ['exterior cladding stone bangalore', 'stone elevation tiles bangalore', 'parking tiles granite bangalore'],
-  },
-];
-
-const productCollections = [
-  {
-    title: 'Italian Marble Capsule',
-    description: 'Calacatta Monaco, Panda White, Verde Alpi, and Portoro curated for hospitality & penthouse foyers.',
-  },
-  {
-    title: 'Dark Roast & Exotic Granites',
-    description: 'Jigani-processed Dark Roast, Red Jasper, Nero Santiago, and flamed driveway slabs.',
-  },
-  {
-    title: 'Temple Sculpture Gallery',
-    description: 'Marble idols, carved pillars, and temple murals with gemstone inlay ready for export installs.',
-  },
-  {
-    title: 'Stone Furniture Line',
-    description: 'Free-form dining tables, sculpted benches, and stone bathtubs with integrated hardware.',
-  },
-];
+import Image from 'next/image';
+import Link from 'next/link';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Stones Gallery Turnkey Stone Services',
-  serviceType: 'Luxury marble, granite, sculpture & cladding services',
+  name: 'Stones Gallery Services',
+  serviceType: 'Natural Stone Products and Custom Solutions',
   provider: {
     '@type': 'Organization',
-    name: 'Dish Impex LLP',
+    name: 'Stones Gallery by Dish Impex LLP',
     telephone: '+91-9035664747',
-    areaServed: ['Bengaluru', 'Jigani', 'Koramangala', 'Indiranagar', 'Whitefield', 'India'],
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Premium Stone Services',
-    itemListElement: services.map((service) => ({
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: service.title,
-        description: service.description,
-        areaServed: ['Bengaluru', 'India'],
-        serviceType: service.title,
-      },
-      itemCondition: 'https://schema.org/NewCondition',
-    })),
+    areaServed: ['Bangalore', 'Jaipur', 'Makrana', 'India'],
   },
 };
 
-const productSchema = {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'Stones Gallery Signature Products',
-  itemListElement: productCollections.map((product, index) => ({
-    '@type': 'Product',
-    position: index + 1,
-    name: product.title,
-    description: product.description,
-    brand: {
-      '@type': 'Brand',
-      name: 'Stones Gallery',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://stonesgallery.in',
     },
-    category: 'Natural Stone',
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'INR',
-      price: '0',
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Our Services',
+      item: 'https://stonesgallery.in/pages/our-services',
     },
-  })),
+  ],
 };
 
 export const metadata: Metadata = {
-  title: 'Stones Gallery Services – Luxury Marble, Granite & Sculptures',
+  title: 'Our Services – Stones Gallery by Dish Impex LLP',
   description:
-    'Dish Impex LLP (StonesGallery.in) delivers Italian marble, granite fabrication, temple sculptures, stone furniture, and façade engineering across Bengaluru and India.',
+    'Stones Gallery offers customized natural stone solutions with creative and agile service. We provide environmentally sustainable products from our production facilities in Jaipur and Makrana.',
   keywords: [
-    'granite supplier bangalore',
-    'italian marble bangalore',
-    'temple sculptures bangalore',
-    'custom stone furniture india',
-    'exterior stone cladding india',
+    'stones gallery services',
+    'custom stone solutions',
+    'natural stone bangalore',
+    'stone production jaipur',
+    'stone production makrana',
   ],
   alternates: {
     canonical: '/pages/our-services',
+  },
+  openGraph: {
+    title: 'Our Services – Stones Gallery',
+    description:
+      'Creative and agile stone solutions. Customized products from our facilities in Jaipur and Makrana.',
+    url: 'https://stonesgallery.in/pages/our-services',
+    type: 'website',
   },
 };
 
 export default function OurServicesPage() {
   return (
-    <main className="min-h-screen bg-white text-[#4c4c4c]">
-      <section className="mx-auto max-w-4xl px-5 py-16 md:py-24 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-[#a07858]">Dish Impex LLP • Stones Gallery</p>
-        <h1 className="mt-4 text-3xl md:text-4xl uppercase tracking-[0.25em] text-[#1f1d1b]">
-          Bespoke stone services for landmark projects
-        </h1>
-        <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-[#6c6764]">
-          From sourcing Italian marble in record time to engineering ventilated façades, Stones Gallery operates as your
-          turnkey partner for villas, hospitality spaces, retail concepts, and temple restorations across Bengaluru and India.
-        </p>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 pb-16">
-        <div className="grid gap-8 md:grid-cols-2">
-          {services.map((service) => (
-            <div key={service.title} className="border border-[#e7e2de] bg-[#fbf8f4] p-6">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#a07858]">{service.keywords[0]}</p>
-              <h2 className="mt-2 text-2xl font-light tracking-[0.1em] text-[#1f1d1b]">{service.title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#5c5552]">{service.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-[#3f3a38]">
-                {service.deliverables.map((item) => (
-                  <li key={item} className="pl-4 text-[#5c5552]">• {item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <main className="min-h-screen bg-white text-[#8d8986]">
+      {/* Hero Section */}
+      <section className="relative h-[70vh] w-full overflow-hidden">
+        <video
+          src="/ourstory.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 flex items-end justify-center pb-12">
+          <h1 className="text-white tracking-[0.3em] text-2xl md:text-3xl uppercase">Our Services</h1>
         </div>
       </section>
 
-      <section className="bg-[#f3efea]">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-xs uppercase tracking-[0.4em] text-[#a07858]">Pan-India build partners</p>
-          <h2 className="mt-3 text-3xl font-light tracking-[0.15em] text-[#1f1d1b]">
-            Jaipur to Delhi, Mumbai to Kochi — one stone partner
-          </h2>
-          <p className="mt-4 text-sm text-[#5c5552] max-w-3xl">
-            Stones Gallery supports architects, builders, and procurement teams across every Indian metro with onsite QA,
-            WhatsApp support, and export-grade packing. Explore the metros we service daily.
-          </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {panIndiaCoverage.map((region) => (
-              <div key={region.region} className="border border-[#dfd4ca] bg-white p-5">
-                <p className="text-xs uppercase tracking-[0.35em] text-[#a07858]">{region.region}</p>
-                <h3 className="mt-2 text-xl font-light tracking-[0.1em] text-[#1f1d1b]">{region.focus}</h3>
-                <p className="mt-2 text-sm text-[#5c5552]">Cities: {region.cities.join(" • ")}</p>
-                <ul className="mt-3 space-y-1 text-sm text-[#5c5552]">
-                  {region.sellingPoints.slice(0, 2).map((point) => (
-                    <li key={point}>• {point}</li>
-                  ))}
-                </ul>
-                <div className="mt-3 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-[#7a746f]">
-                  {region.keywords.slice(0, 4).map((keyword) => (
-                    <span key={keyword} className="border border-[#d1c6bd] px-2 py-1">
-                      {keyword}
-                    </span>
-                  ))}
+      {/* Main Content */}
+      <section className="mx-auto max-w-[1100px] px-5 py-14 md:py-20">
+        <p className="mb-6 text-base leading-7">
+          We are creative and agile. We are responsive and committed to environmentally sustainable products.
+        </p>
+        <p className="mb-6 text-base leading-7">
+          Stones Gallery offers customized solutions to satisfy customer's requirement and to make their stone dreams come alive. We have our production facility at stone city of Rajasthan – Jaipur and Makrana.
+        </p>
+        <p className="text-base leading-7">
+          Do visit our store to experience our range of stunning products.
+        </p>
+      </section>
+
+      {/* Production Facilities Images */}
+      <section className="mx-auto max-w-[1100px] px-5 py-10 md:py-16">
+        <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-8 text-center">Our Facilities</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative h-[400px] overflow-hidden">
+            <Image
+              src="/stonesgallerystages/Phase 4- Fabrication.jpeg"
+              alt="Stones Gallery Production Facility - Jaipur"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-lg font-medium">Jaipur Production Facility</p>
+            </div>
+          </div>
+          <div className="relative h-[400px] overflow-hidden">
+            <Image
+              src="/stonesgallerystages/Phase 4- Fabrication2.jpeg"
+              alt="Stones Gallery Production Facility - Makrana"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-lg font-medium">Makrana Production Facility</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Store & Contact Section */}
+      <section className="bg-stone-50 py-14 md:py-20">
+        <div className="mx-auto max-w-[1100px] px-5">
+          <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-12 text-center">Visit Our Store</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <MapPin className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-medium text-[#444] mb-2">Store Location</h3>
+                  <p className="text-base text-[#8d8986] leading-relaxed">
+                    Jigani, Bangalore<br />
+                    Karnataka, India
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-[#111] text-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-white/70">Product capsules</p>
-              <h2 className="mt-3 text-3xl font-light tracking-[0.15em]">Signature stone collections</h2>
-              <p className="mt-4 text-sm text-white/70">
-                Premium slabs, sculptures, and furniture curated for villa foyers, clubhouses, and export orders. Each capsule can be toured virtually or in person at Jigani and Koramangala.
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {productCollections.map((product) => (
-                <div key={product.title} className="border border-white/15 bg-white/5 p-4">
-                  <h3 className="text-xl font-light tracking-[0.1em]">{product.title}</h3>
-                  <p className="text-sm text-white/70">{product.description}</p>
+              <div>
+                <h3 className="text-lg font-medium text-[#444] mb-3">Production Facilities</h3>
+                <div className="space-y-3 text-base text-[#8d8986]">
+                  <p className="flex items-start gap-2">
+                    <span className="text-[#444]">•</span>
+                    <span>Jaipur, Rajasthan</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-[#444]">•</span>
+                    <span>Makrana, Rajasthan</span>
+                  </p>
                 </div>
-              ))}
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Phone className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-medium text-[#444] mb-2">Phone</h3>
+                  <a href="tel:+919876543210" className="text-base text-[#8d8986] hover:text-black transition-colors">
+                    +91 98765 43210
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Mail className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-medium text-[#444] mb-2">Email</h3>
+                  <a href="mailto:info@stonesgallery.in" className="text-base text-[#8d8986] hover:text-black transition-colors">
+                    info@stonesgallery.in
+                  </a>
+                </div>
+              </div>
+
+              <div className="pt-6">
+                <Link
+                  href="/pages/contact-us"
+                  className="inline-block border border-[#cfcfcf] px-8 py-3 text-xs uppercase tracking-[0.15em] text-[#444] hover:bg-black hover:text-white hover:border-black transition-colors"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="relative h-[500px] overflow-hidden border border-stone-200">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b83e05e2c91%3A0x82acf4b7e7f4e84f!2sJigani%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-16 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-[#a07858]">Schedule a spec review</p>
-        <h2 className="mt-3 text-3xl font-light tracking-[0.2em] text-[#1f1d1b]">Send drawings, BOQs, or WhatsApp voice notes</h2>
-        <p className="mt-4 text-sm text-[#5c5552]">
-          Email sales@stonesgallery.in or WhatsApp +91 90356 64747 for granite, marble, idol, or export requests. We revert within 12 working hours.
+      {/* Collections CTA */}
+      <section className="mx-auto max-w-[1100px] px-5 py-14 md:py-20 text-center">
+        <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-6">Explore Our Products</h2>
+        <p className="text-base text-[#8d8986] mb-8 max-w-2xl mx-auto">
+          Discover our exclusive collection of natural stone products, from idols and sculptures to home décor and wall claddings.
         </p>
+        <Link
+          href="/pages/our-collection"
+          className="inline-block border border-[#cfcfcf] px-8 py-3 text-xs uppercase tracking-[0.15em] text-[#444] hover:bg-black hover:text-white hover:border-black transition-colors"
+        >
+          View Collections
+        </Link>
       </section>
-      <Script id="stonesgallery-service-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(serviceSchema)}
+
+      {/* Schema Markup */}
+      <Script id="our-services-breadcrumb" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(breadcrumbSchema)}
       </Script>
-      <Script id="stonesgallery-product-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(productSchema)}
+      <Script id="our-services-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(serviceSchema)}
       </Script>
     </main>
   );
