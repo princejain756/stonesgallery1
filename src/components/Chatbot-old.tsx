@@ -5,6 +5,17 @@ import { X, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
+const Chatbot: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+
+'use client';
+
+import React, { useState } from 'react';
+import { X, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

@@ -10,70 +10,70 @@ interface Collection {
 
 const collectionsData: Collection[] = [
   {
-    title: "PATTERN PLAY",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/PATTERN_PLAY-04_1950x-18.jpg",
-    heightClass: "h-[600px]",
-    slug: "pattern-play"
+    title: "DINING TABLE",
+    imageUrl: "/collections/stonesgallerycollections/diningtablebig.webp",
+    heightClass: "h-[500px]",
+    slug: "dining-table"
   },
   {
-    title: "Beautés de la Campagne",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/BEAUTS-14_1950x-20.jpg",
+    title: "MODERN ART",
+    imageUrl: "/collections/stonesgallerycollections/modernartbig.webp",
     heightClass: "h-[400px]",
-    slug: "beautes-de-la-campagne"
+    slug: "modern-art"
   },
   {
-    title: "TRANSCENDENCE",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/TRANS-05_1950x-22.jpg",
+    title: "TEMPLES",
+    imageUrl: "/collections/stonesgallerycollections/templesbig.webp",
+    heightClass: "h-[500px]",
+    slug: "temples"
+  },
+  {
+    title: "IDOLS",
+    imageUrl: "/collections/stonesgallerycollections/idolsbig.webp",
     heightClass: "h-[400px]",
-    slug: "transcendence"
+    slug: "idols"
   },
   {
-    title: "LE REFORMAGE",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/LE_REFORMAGE-14_1950x-24.jpg",
-    heightClass: "h-[600px]",
-    slug: "le-reformage"
+    title: "MARBLE TEMPLES",
+    imageUrl: "/Marble temples/majestic lotus pavilion.jpg",
+    heightClass: "h-[500px]",
+    slug: "marble-temples"
   },
   {
-    title: "MORE THAN MEETS THE EYE",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/MORE-04_1950x-26.jpg",
-    heightClass: "h-[600px]",
-    slug: "more-than-meets-the-eye"
-  },
-  {
-    title: "KANE N ABEL",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/KANE-14_1950x-28.jpg",
+    title: "CUSTOMISED TEMPLES",
+    imageUrl: "/Customised Temples/grand heritage mandap.jpg",
     heightClass: "h-[400px]",
-    slug: "kane-n-abel"
+    slug: "customised-temples"
   },
   {
-    title: "ALL THAT JAZZ",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/collections-29_b75de5f6-217f-40a1-9d5e-03f4452b7e3-29.jpg",
+    title: "TULSI POTS",
+    imageUrl: "/tulsi pot/custom tulsi pots.jpg",
     heightClass: "h-[400px]",
-    slug: "all-that-jazz"
+    slug: "tulsi-pots"
   },
   {
-    title: "NATURAL ESSENCE",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/our_collections_banner-26_9f9d5e78-79e7-4e9e-b874--30.jpg",
-    heightClass: "h-[600px]",
-    slug: "natural-essence"
+    title: "FOUNTAIN",
+    imageUrl: "/collections/stonesgallerycollections/fountainbig.webp",
+    heightClass: "h-[500px]",
+    slug: "fountain"
   },
   {
-    title: "KNOCK ON WOOD",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/collections-37-19.jpg",
-    heightClass: "h-[600px]",
-    slug: "knock-on-wood"
-  },
-  {
-    title: "THE ART OF HAND TUFTING",
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/images/Vienna_Bed_-_By_Nivasa_1_dfbd543f-372f-44bf-af38-c-25.jpg",
+    title: "GARDEN DECOR",
+    imageUrl: "/collections/stonesgallerycollections/gardendecorbig.webp",
     heightClass: "h-[400px]",
-    slug: "the-art-of-hand-tufting"
+    slug: "garden-decor"
+  },
+  {
+    title: "WALL PANEL",
+    imageUrl: "/collections/stonesgallerycollections/WALLPANELBIG.webp",
+    heightClass: "h-[500px]",
+    slug: "wall-panel"
   }
 ];
 
 const CollectionTile = ({ collection }: { collection: Collection }) => {
   return (
-    <Link href={`/collections/${collection.slug}`} className={`group relative block overflow-hidden ${collection.heightClass}`}>
+    <Link href={`/pages/our-collection?collection=${collection.slug}`} className={`group relative block overflow-hidden ${collection.heightClass}`}>
       <Image
         src={collection.imageUrl}
         alt={collection.title}
@@ -81,6 +81,12 @@ const CollectionTile = ({ collection }: { collection: Collection }) => {
         sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover transition-all duration-400 ease-in-out group-hover:scale-105"
       />
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h3 className="text-white text-xl md:text-2xl font-light tracking-[0.2em] uppercase text-center px-4">
+          {collection.title}
+        </h3>
+      </div>
     </Link>
   );
 };

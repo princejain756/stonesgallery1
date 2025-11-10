@@ -13,6 +13,7 @@ interface CollectionData {
   largeImage: string;
   pdfUrl?: string;
   pdfPage?: number;
+  galleryImages?: string[];
 }
 
 const collectionsDatabase: Record<string, CollectionData> = {
@@ -85,6 +86,60 @@ const collectionsDatabase: Record<string, CollectionData> = {
     largeImage: '/collections/stonesgallerycollections/WALLPANELBIG.webp',
     pdfUrl: '/collections/allproductsareinthis.pdf',
     pdfPage: 6
+  },
+  'tulsi-pots': {
+    id: '8',
+    title: 'TULSI POTS',
+    subtitle: 'Sacred Planters',
+    description: 'Handcrafted stone tulsi pots in various sizes and designs. Available in Makrana marble, sandstone, and granite. Perfect for your sacred tulsi plant.',
+    smallImage: '/tulsi pot/makarana marble 25x18x18.jpg',
+    largeImage: '/tulsi pot/custom tulsi pots.jpg',
+    galleryImages: [
+      '/tulsi pot/makarana marble 27x16.jpg',
+      '/tulsi pot/makarana marble 34x15x15.png',
+      '/tulsi pot/sandstone 20x15x15.png',
+      '/tulsi pot/sadarahalli granite 22x17x17.jpg',
+      '/tulsi pot/pink sandstone.jpg',
+      '/tulsi pot/custom tulsi pots1.jpg',
+      '/tulsi pot/custom tulsi pots2.jpg',
+      '/tulsi pot/custom tulsi pots3.jpg',
+    ]
+  },
+  'marble-temples': {
+    id: '9',
+    title: 'MARBLE TEMPLES',
+    subtitle: 'Premium Marble Mandirs',
+    description: 'Exquisite marble temples crafted from premium Makrana and Vietnam marble. Features intricate carvings, mother of pearl inlay, and traditional designs.',
+    smallImage: '/Marble temples/heritage crown mandir.jpg',
+    largeImage: '/Marble temples/majestic lotus pavilion.jpg',
+    galleryImages: [
+      '/Marble temples/eternal grace mandir.jpg',
+      '/Marble temples/royal heritage shrine.jpg',
+      '/Marble temples/shikhar bliss mandir.jpg',
+      '/Marble temples/vibrant heritage mandir.jpg',
+      '/Marble temples/marble serenity mandap.jpg',
+      '/Marble temples/tranquil marble niche.jpg',
+      '/Marble temples/serene lotus alcove.jpg',
+      '/Marble temples/blissful sanctuary mandap.jpg',
+    ]
+  },
+  'customised-temples': {
+    id: '10',
+    title: 'CUSTOMISED TEMPLES',
+    subtitle: 'Bespoke Designs',
+    description: 'Custom-designed temples tailored to your specific requirements. From modern minimalist to traditional ornate designs, we create sacred spaces that reflect your vision.',
+    smallImage: '/Customised Temples/divine majesty mandir.jpg',
+    largeImage: '/Customised Temples/grand heritage mandap.jpg',
+    galleryImages: [
+      '/Customised Temples/celestial serenity mandap.jpg',
+      '/Customised Temples/golden grace temple.jpg',
+      '/Customised Temples/peacock splendor mandap.jpg',
+      '/Customised Temples/regal peacock alcove.jpg',
+      '/Customised Temples/tree of life mandir.jpg',
+      '/Customised Temples/royal arches sanctuary.jpg',
+      '/Customised Temples/ganesh harmony sanctuary.jpg',
+      '/Customised Temples/lotus entrance mandap.jpg',
+    ]
   }
 };
 
@@ -218,6 +273,34 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
               />
             </div>
           </div>
+
+          {/* Gallery Section - Only show if collection has gallery images */}
+          {collection.galleryImages && collection.galleryImages.length > 0 && (
+            <div className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-stone-200">
+              <div className="mb-8 md:mb-12">
+                <h3 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-center mb-4">
+                  Collection Gallery
+                </h3>
+                <p className="text-center text-stone-600 tracking-wide">
+                  Explore more designs from our {collection.title.toLowerCase()} collection
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                {collection.galleryImages.map((image, index) => (
+                  <div key={index} className="relative aspect-square overflow-hidden rounded-lg shadow-md group">
+                    <Image
+                      src={image}
+                      alt={`${collection.title} - Gallery ${index + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Navigation between collections */}
           <div className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-stone-200">

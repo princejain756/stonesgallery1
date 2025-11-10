@@ -93,27 +93,41 @@ export default function OurServicesPage() {
       {/* Production Facilities Images */}
       <section className="mx-auto max-w-[1100px] px-5 py-10 md:py-16">
         <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-8 text-center">Our Facilities</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/stonesgallerystages/Phase 4- Fabrication.jpeg"
-              alt="Stones Gallery Production Facility - Jaipur"
+              src="/bangaloreshowroom.webp"
+              alt="Stones Gallery Bangalore Showroom"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Bangalore Showroom</p>
             </div>
           </div>
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/stonesgallerystages/Phase 4- Fabrication2.jpeg"
-              alt="Stones Gallery Production Facility - Makrana"
+              src="/bangaloreshowroom2.webp"
+              alt="Stones Gallery Bangalore Production Facility"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Bangalore Production Facility</p>
+            </div>
+          </div>
+          <div className="relative h-[400px] overflow-hidden">
+            <Image
+              src="/bangaloreshowroom3.webp"
+              alt="Stones Gallery Bangalore Fabrication Unit"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Fabrication Unit</p>
             </div>
           </div>
         </div>

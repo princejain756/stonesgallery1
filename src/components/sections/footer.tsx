@@ -81,6 +81,20 @@ const Footer = () => {
             ))}
           </div>
         </div>
+
+        <div className="mt-12 pt-8 border-t border-[#dddddd] text-center">
+          <p className="text-xs text-[#999999]">
+            Powered by{' '}
+            <a
+              href="https://maninfini.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#666666] hover:text-[#333333] transition-colors duration-300 underline"
+            >
+              Maninfini Automation
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
