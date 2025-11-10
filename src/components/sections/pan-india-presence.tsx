@@ -24,7 +24,7 @@ const PanIndiaPresence = () => {
               Luxury marble, granite &amp; idols delivered to every metro
             </h2>
             <p className="mt-4 text-white/75 max-w-2xl">
-              Stones Gallery by Dish Impex LLP services heritage marble hubs like Jaipur and Kishangarh, high-rise
+              Stones Gallery by Dish Impex LLP (Sy.no, 16/2, hobli, begihalli village, taluk, Jigani, Anekal, Karnataka 560105) services heritage marble hubs like Jaipur and Kishangarh, high-rise
               corridors across Delhi NCR and Mumbai, and coastal resorts from Kochi to Chennai—while shipping custom idols
               and furniture nationwide.
             </p>

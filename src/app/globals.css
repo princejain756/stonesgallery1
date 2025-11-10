@@ -185,21 +185,21 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.01em;
   }
 
   h1 {
     font-family: var(--font-display);
-    font-size: 64px;
+    font-size: 72px;
     line-height: 1.1;
     letter-spacing: 0.05em;
   }
 
   h2 {
     font-family: var(--font-display);
-    font-size: 48px;
+    font-size: 54px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -207,7 +207,7 @@
 
   h3 {
     font-family: var(--font-display);
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.3;
     letter-spacing: 0.02em;
   }
@@ -219,7 +219,7 @@
 
   button {
     font-family: var(--font-body);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1;
     letter-spacing: 0.2em;
@@ -228,14 +228,14 @@
 
   input {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
     letter-spacing: 0.02em;
   }
 
   label {
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.02em;
   }
@@ -243,7 +243,7 @@
   small,
   .caption {
     font-family: var(--font-body);
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.4;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -259,16 +259,16 @@
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 42px;
+      font-size: 48px;
     }
     h2 {
-      font-size: 32px;
+      font-size: 36px;
     }
     h3 {
-      font-size: 24px;
+      font-size: 28px;
     }
     body {
-      font-size: 14px;
+      font-size: 16px;
     }
     .container {
       padding-left: 20px;

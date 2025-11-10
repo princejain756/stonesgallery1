@@ -40,12 +40,12 @@ const localBusinessSchema = {
   description:
     "Dish Impex LLP (Stones Gallery) supplies luxury marble, granite, quartzite, temple sculptures, and custom stone furniture for premium homes and commercial projects across Bengaluru, Delhi NCR, Mumbai, Jaipur, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, Kochi, and pan-India digital buyers.",
   telephone: "+91-9876543210",
-  email: "sales@stonesgallery.in",
+  email: "dishimpex@gmail.com",
   priceRange: "₹₹₹",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Jigani Industrial Area",
-    addressLocality: "Bengaluru",
+    streetAddress: "Sy.no, 16/2, hobli, begihalli village, taluk, Jigani, Anekal, Karnataka 560105",
+    addressLocality: "Jigani",
     postalCode: "560105",
     addressRegion: "Karnataka",
     addressCountry: "IN",

@@ -180,8 +180,8 @@ export default function OurServicesPage() {
                 <Mail className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-[#444] mb-2">Email</h3>
-                  <a href="mailto:info@stonesgallery.in" className="text-base text-[#8d8986] hover:text-black transition-colors">
-                    info@stonesgallery.in
+                  <a href="mailto:dishimpex@gmail.com" className="text-base text-[#8d8986] hover:text-black transition-colors">
+                    dishimpex@gmail.com
                   </a>
                 </div>
               </div>

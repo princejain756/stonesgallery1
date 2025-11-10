@@ -110,16 +110,7 @@ export default function OurStoryPage() {
       {/* Store Images Section */}
       <section className="mx-auto max-w-[1100px] px-5 py-10 md:py-16">
         <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-8 text-center">Our Boutique</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative h-[400px] overflow-hidden">
-            <Image
-              src="/stonesgallerystages/Phase 2 Material Selection.webp"
-              alt="Stones Gallery Boutique - Material Selection"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+        <div className="grid grid-cols-1 gap-6 max-w-md mx-auto">
           <div className="relative h-[400px] overflow-hidden">
             <Image
               src="/stonesgallerystages/Phase 4- Fabrication.jpeg"
@@ -165,8 +156,8 @@ export default function OurStoryPage() {
                 <Mail className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-[#444] mb-2">Email</h3>
-                  <a href="mailto:info@stonesgallery.in" className="text-base text-[#8d8986] hover:text-black transition-colors">
-                    info@stonesgallery.in
+                  <a href="mailto:dishimpex@gmail.com" className="text-base text-[#8d8986] hover:text-black transition-colors">
+                    dishimpex@gmail.com
                   </a>
                 </div>
               </div>

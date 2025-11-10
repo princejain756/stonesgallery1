@@ -211,7 +211,7 @@ export default function OurServicesPage() {
         <p className="text-xs uppercase tracking-[0.4em] text-[#a07858]">Schedule a spec review</p>
         <h2 className="mt-3 text-3xl font-light tracking-[0.2em] text-[#1f1d1b]">Send drawings, BOQs, or WhatsApp voice notes</h2>
         <p className="mt-4 text-sm text-[#5c5552]">
-          Email sales@stonesgallery.in or WhatsApp +91 90356 64747 for granite, marble, idol, or export requests. We revert within 12 working hours.
+          Email dishimpex@gmail.com or WhatsApp +91 90356 64747 for granite, marble, idol, or export requests. We revert within 12 working hours.
         </p>
       </section>
       <Script id="stonesgallery-service-schema" type="application/ld+json" strategy="afterInteractive">

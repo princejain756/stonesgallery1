@@ -265,7 +265,7 @@ export function generateOrganizationSchema() {
         '@type': 'ContactPoint',
         telephone: '+91-9876543210',
         contactType: 'customer service',
-        email: 'sales@stonesgallery.in',
+        email: 'dishimpex@gmail.com',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi', 'Kannada'],
       },
@@ -273,7 +273,7 @@ export function generateOrganizationSchema() {
         '@type': 'ContactPoint',
         telephone: '+91-9876543210',
         contactType: 'sales',
-        email: 'sales@stonesgallery.in',
+        email: 'dishimpex@gmail.com',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi'],
       },
@@ -351,7 +351,6 @@ export function generateServiceSchema(params: {
  */
 export function getLocationKeywords(location: string): string[] {
   return [
-    `${location} granite supplier`,
     `${location} marble shop`,
     `${location} natural stone`,
     `stone supplier ${location}`,

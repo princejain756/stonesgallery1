@@ -5,7 +5,6 @@ import ServicesHero from '@/components/sections/services-hero';
 import WhereArtMeetsEngineering from '@/components/sections/where-art-meets-engineering';
 import LiveTheExperience from '@/components/sections/live-the-experience';
 import FeaturedCollections from '@/components/sections/featured-collections';
-import PanIndiaPresence from '@/components/sections/pan-india-presence';
 import BlogInsights from '@/components/sections/blog-insights';
 
 // Enhanced homepage structured data
@@ -52,7 +51,7 @@ const homepageOfferCatalog = {
       position: 5,
       name: 'Exterior Cladding',
       description: 'Façade engineering and stone cladding for luxury villas',
-      provider: { '@type': 'Organization', name: 'Dish Impex LLP' },
+  provider: { '@type': 'Organization', name: 'Dish Impex LLP', address: 'Sy.no, 16/2, hobli, begihalli village, taluk, Jigani, Anekal, Karnataka 560105' },
     },
   ],
 };
@@ -66,7 +65,6 @@ export default function HomePage() {
       <WhereArtMeetsEngineering />
       <LiveTheExperience />
       <FeaturedCollections />
-      <PanIndiaPresence />
       <BlogInsights />
       
       <Script id="homepage-offer-catalog" type="application/ld+json" strategy="afterInteractive">

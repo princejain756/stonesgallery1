@@ -6,21 +6,15 @@ import CollectionDetail from '@/components/sections/collection-detail';
 import { ChevronRight } from 'lucide-react';
 
 const collectionsCategories = [
-  { name: 'Dining Table', slug: 'dining-table' },
-  { name: 'Modern Art', slug: 'modern-art' },
-  { name: 'Garden Decor', slug: 'garden-decor' },
+  { name: 'Dining Tables', slug: 'dining-tables' },
+  { name: 'Idols and Temples', slug: 'idols-and-temples' },
+  { name: 'Home Decor', slug: 'home-decor' },
   { name: 'Fountain', slug: 'fountain' },
-  { name: 'Idols', slug: 'idols' },
-  { name: 'Temples', slug: 'temples' },
-  { name: 'Wall Panel', slug: 'wall-panel' },
-  { name: 'Tulsi Pots', slug: 'tulsi-pots' },
-  { name: 'Marble Temples', slug: 'marble-temples' },
-  { name: 'Customised Temples', slug: 'customised-temples' },
-  { name: 'Marble Sinks', slug: 'marble-sinks' },
+  { name: 'Wall Cladding', slug: 'wall-cladding' },
 ];
 
 export default function CollectionPage() {
-  const [collection, setCollection] = useState('dining-table');
+  const [collection, setCollection] = useState('dining-tables');
   const [isMounted, setIsMounted] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

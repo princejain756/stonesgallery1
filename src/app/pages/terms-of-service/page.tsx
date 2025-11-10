@@ -206,7 +206,7 @@ export default function TermsOfServicePage() {
               7.3 Warranty Claims
             </h3>
             <p className="text-stone-700 leading-relaxed mb-6">
-              To claim warranty: Email <a href="mailto:warranty@stonesgallery.in" className="text-stone-900 underline">warranty@stonesgallery.in</a> with photos, order number, and issue description. We conduct a free site inspection within 7 business days. Valid claims are resolved via repair, replacement, or refund (our discretion).
+              To claim warranty: Email <a href="mailto:dishimpex@gmail.com" className="text-stone-900 underline">dishimpex@gmail.com</a> with photos, order number, and issue description. We conduct a free site inspection within 7 business days. Valid claims are resolved via repair, replacement, or refund (our discretion).
             </p>
 
             {/* 8. Disclaimers */}
@@ -298,7 +298,7 @@ export default function TermsOfServicePage() {
             <div className="bg-stone-100 border-l-4 border-stone-800 p-6 mb-6">
               <p className="font-semibold text-stone-900 mb-2">Stones Gallery (Dish Impex LLP)</p>
               <p className="text-stone-700">
-                <strong>Email:</strong> <a href="mailto:legal@stonesgallery.in" className="text-stone-900 underline">legal@stonesgallery.in</a>
+                <strong>Email:</strong> <a href="mailto:dishimpex@gmail.com" className="text-stone-900 underline">dishimpex@gmail.com</a>
               </p>
               <p className="text-stone-700">
                 <strong>WhatsApp:</strong> +91 90356 64747
@@ -323,7 +323,7 @@ export default function TermsOfServicePage() {
             Our team is here to clarify any aspect of our terms and conditions.
           </p>
           <a
-            href="mailto:legal@stonesgallery.in"
+            href="mailto:dishimpex@gmail.com"
             className="inline-block bg-white hover:bg-stone-100 text-stone-900 font-semibold px-8 py-3 rounded-lg transition-colors"
           >
             Contact Legal Team

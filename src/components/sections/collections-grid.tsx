@@ -10,46 +10,22 @@ interface Collection {
 
 const collectionsData: Collection[] = [
   {
-    title: "DINING TABLE",
-    imageUrl: "/collections/stonesgallerycollections/diningtablebig.webp",
+    title: "DINING TABLES",
+    imageUrl: "/collections/stonesgallerycollections/DININGTABLESBIG.webp",
     heightClass: "h-[500px]",
-    slug: "dining-table"
+    slug: "dining-tables"
   },
   {
-    title: "MODERN ART",
-    imageUrl: "/collections/stonesgallerycollections/modernartbig.webp",
-    heightClass: "h-[400px]",
-    slug: "modern-art"
-  },
-  {
-    title: "TEMPLES",
-    imageUrl: "/collections/stonesgallerycollections/templesbig.webp",
-    heightClass: "h-[500px]",
-    slug: "temples"
-  },
-  {
-    title: "IDOLS",
-    imageUrl: "/collections/stonesgallerycollections/idolsbig.webp",
-    heightClass: "h-[400px]",
-    slug: "idols"
-  },
-  {
-    title: "MARBLE TEMPLES",
+    title: "IDOLS AND TEMPLES",
     imageUrl: "/Marble temples/majestic lotus pavilion.jpg",
     heightClass: "h-[500px]",
-    slug: "marble-temples"
+    slug: "idols-and-temples"
   },
   {
-    title: "CUSTOMISED TEMPLES",
-    imageUrl: "/Customised Temples/grand heritage mandap.jpg",
-    heightClass: "h-[400px]",
-    slug: "customised-temples"
-  },
-  {
-    title: "TULSI POTS",
-    imageUrl: "/tulsi pot/custom tulsi pots.jpg",
-    heightClass: "h-[400px]",
-    slug: "tulsi-pots"
+    title: "HOME DECOR",
+    imageUrl: "/collections/stonesgallerycollections/MODERNARTBIG.webp",
+    heightClass: "h-[500px]",
+    slug: "home-decor"
   },
   {
     title: "FOUNTAIN",
@@ -58,22 +34,10 @@ const collectionsData: Collection[] = [
     slug: "fountain"
   },
   {
-    title: "GARDEN DECOR",
-    imageUrl: "/collections/stonesgallerycollections/gardendecorbig.webp",
-    heightClass: "h-[400px]",
-    slug: "garden-decor"
-  },
-  {
-    title: "WALL PANEL",
+    title: "WALL CLADDING",
     imageUrl: "/collections/stonesgallerycollections/WALLPANELBIG.webp",
     heightClass: "h-[500px]",
-    slug: "wall-panel"
-  },
-  {
-    title: "MARBLE SINKS",
-    imageUrl: "/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0020.jpg",
-    heightClass: "h-[400px]",
-    slug: "marble-sinks"
+    slug: "wall-cladding"
   }
 ];
 

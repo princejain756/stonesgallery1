@@ -98,22 +98,17 @@ export default function Header() {
                 </Link>
               </div>
               <div className="w-1/3 flex justify-end items-center gap-4">
-                <Link href="/account" aria-label="Account" className="group">
-                  <span className="h-9 w-9 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80">
-                    <User className="h-5 w-5 text-white/95" />
+                <a
+                  href="https://wa.me/919035664747?text=Hi%2C%20Stones%20Gallery"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                  aria-label="WhatsApp"
+                >
+                  <span className="h-9 w-28 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80 bg-transparent">
+                    <span className="text-white text-xs font-semibold tracking-widest" style={{letterSpacing: '0.15em'}}>WHATSAPP</span>
                   </span>
-                </Link>
-                <button aria-label="Search" className="group">
-                  <span className="h-9 w-9 rounded-full border border-white/50 flex items-center justify-center transition-all duration-200 hover:border-white/80">
-                    <Image
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
-                      alt="Search"
-                      width={18}
-                      height={18}
-                      className="opacity-95"
-                    />
-                  </span>
-                </button>
+                </a>
               </div>
             </div>
             <div className="px-2">
@@ -150,21 +145,17 @@ export default function Header() {
               />
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/account" aria-label="Account" className="group">
-                <span className="h-8 w-8 rounded-full border border-white/50 flex items-center justify-center">
-                  <User className="h-4 w-4 text-white/95" />
+              <a
+                href="https://wa.me/919035664747?text=Hi%2C%20Stones%20Gallery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="WhatsApp"
+              >
+                <span className="h-8 w-24 rounded-full border border-white/50 flex items-center justify-center bg-transparent">
+                  <span className="text-white text-xs font-semibold tracking-widest" style={{letterSpacing: '0.15em'}}>WHATSAPP</span>
                 </span>
-              </Link>
-              <button aria-label="Search" className="group">
-                <span className="h-8 w-8 rounded-full border border-white/50 flex items-center justify-center">
-                  <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/search_icon-03-1.svg"
-                    alt="Search"
-                    width={16}
-                    height={16}
-                  />
-                </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

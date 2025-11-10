@@ -80,17 +80,8 @@ const SplitHeroIntroducing = () => {
           </div>
           <div className="grid gap-4 text-sm md:grid-cols-2">
             <div className="bg-white/10 p-4 backdrop-blur">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/70">Priority Zones</p>
-              <ul className="mt-2 space-y-1 text-white/90">
-                <li>Jigani &amp; Electronic City factories</li>
-                <li>JP Nagar • Jayanagar • Banashankari</li>
-                <li>Koramangala • Indiranagar • Whitefield</li>
-              </ul>
-            </div>
-            <div className="bg-white/10 p-4 backdrop-blur">
               <p className="text-xs uppercase tracking-[0.3em] text-white/70">Signature Deliverables</p>
               <ul className="mt-2 space-y-1 text-white/90">
-                <li>Granite countertops &amp; dining tables</li>
                 <li>Temple sculptures &amp; marble idols</li>
                 <li>Exterior cladding &amp; garden artifacts</li>
               </ul>

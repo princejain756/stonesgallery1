@@ -17,27 +17,27 @@ interface FeaturedCollection {
 const featuredCollections: FeaturedCollection[] = [
   {
     id: '1',
-    title: 'DINING TABLE',
-    subtitle: 'Premium Furniture',
-    description: 'Exquisite stone dining tables that combine elegance and durability, perfect for creating memorable dining experiences.',
-    image: '/collections/stonesgallerycollections/diningtablebig.webp',
-    slug: 'dining-table'
+    title: 'DINING TABLES',
+    subtitle: 'Elegant Stone Tables',
+    description: 'Transform your dining space with our exquisite collection of handcrafted stone dining tables.',
+    image: '/redsize/dining_and_tables_0200_rectangular_stone_dining_table.webp',
+    slug: 'dining-tables'
   },
   {
     id: '2',
-    title: 'MODERN ART',
-    subtitle: 'Artistic Collection',
-    description: 'Contemporary stone art pieces that bring sophistication and artistic expression to your living spaces.',
-    image: '/collections/stonesgallerycollections/modernartbig.webp',
-    slug: 'modern-art'
+    title: 'IDOLS AND TEMPLES',
+    subtitle: 'Sacred Art & Structures',
+    description: 'Beautifully carved stone idols and exquisite temples that bring spiritual elegance to your sacred spaces.',
+    image: '/Marble temples/majestic lotus pavilion.jpg',
+    slug: 'idols-and-temples'
   },
   {
     id: '3',
-    title: 'GARDEN DECOR',
-    subtitle: 'Outdoor Collection',
-    description: 'Beautiful stone garden decorations that enhance your outdoor spaces with natural elegance and timeless beauty.',
-    image: '/collections/stonesgallerycollections/gardendecorbig.webp',
-    slug: 'garden-decor'
+    title: 'HOME DECOR',
+    subtitle: 'Contemporary & Garden Elegance',
+    description: 'Experience the fusion of traditional stone craftsmanship with modern artistic expression.',
+    image: '/collections/stonesgallerycollections/MODERNARTBIG.webp',
+    slug: 'home-decor'
   }
 ];
 

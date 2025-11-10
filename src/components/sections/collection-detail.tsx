@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X, FileText } from 'lucide-react';
 import WallPanelGallery from './wall-panel-gallery';
 import MarbleSinksGallery from './marble-sinks-gallery';
+import CollectionGallery from './collection-gallery';
 
 interface CollectionData {
   id: string;
@@ -16,105 +17,50 @@ interface CollectionData {
   pdfUrl?: string;
   pdfPage?: number;
   galleryImages?: string[];
+  slideshowImages?: string[];
 }
 
 const collectionsDatabase: Record<string, CollectionData> = {
-  'dining-table': {
+  'dining-tables': {
     id: '1',
-    title: 'DINING TABLE',
-    subtitle: 'Premium Furniture',
-    description: 'Exquisite stone dining tables that combine elegance and durability, perfect for creating memorable dining experiences. Each piece is crafted with precision to bring timeless beauty to your dining space.',
-    smallImage: '/collections/stonesgallerycollections/diningtablesmall.webp',
-    largeImage: '/collections/stonesgallerycollections/diningtablebig.webp',
+    title: 'DINING TABLES',
+    subtitle: 'Elegant Stone Tables',
+    description: 'Transform your dining space with our exquisite collection of handcrafted stone dining tables. Each piece is a masterwork of natural beauty and artisan craftsmanship.',
+    smallImage: '/collections/stonesgallerycollections/diningtablessmall.webp',
+    largeImage: '/collections/stonesgallerycollections/DININGTABLESBIG.webp',
     pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 4
-  },
-  'modern-art': {
-    id: '2',
-    title: 'MODERN ART',
-    subtitle: 'Artistic Collection',
-    description: 'Contemporary stone art pieces that bring sophistication and artistic expression to your living spaces. Each sculpture tells a unique story through natural stone.',
-    smallImage: '/collections/stonesgallerycollections/modernartsmall.webp',
-    largeImage: '/collections/stonesgallerycollections/modernartbig.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 4
-  },
-  'garden-decor': {
-    id: '3',
-    title: 'GARDEN DECOR',
-    subtitle: 'Outdoor Collection',
-    description: 'Beautiful stone garden decorations that enhance your outdoor spaces with natural elegance and timeless beauty. Perfect for creating serene outdoor environments.',
-    smallImage: '/collections/stonesgallerycollections/gardendecorsmall.webp',
-    largeImage: '/collections/stonesgallerycollections/gardendecorbig.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 7
-  },
-  'fountain': {
-    id: '4',
-    title: 'FOUNTAIN',
-    subtitle: 'Water Features',
-    description: 'Magnificent stone fountains that add a touch of luxury and tranquility to any space. The perfect centerpiece for gardens and courtyards.',
-    smallImage: '/collections/stonesgallerycollections/fountainsmall.webp',
-    largeImage: '/collections/stonesgallerycollections/fountainbig.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 8
-  },
-  'idols': {
-    id: '5',
-    title: 'IDOLS',
-    subtitle: 'Spiritual Collection',
-    description: 'Beautifully carved stone idols that bring spiritual elegance and divine presence to your sacred spaces. Each piece is crafted with devotion and attention to detail.',
-    smallImage: '/collections/stonesgallerycollections/idolssmall.webp',
-    largeImage: '/collections/stonesgallerycollections/idolsbig.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 2
-  },
-  'temples': {
-    id: '6',
-    title: 'TEMPLES',
-    subtitle: 'Sacred Structures',
-    description: 'Exquisite stone temples that create a divine atmosphere in your home. Masterfully crafted with traditional designs and modern craftsmanship.',
-    smallImage: '/collections/stonesgallerycollections/templessmall.webp',
-    largeImage: '/collections/stonesgallerycollections/templesbig.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 3
-  },
-  'wall-panel': {
-    id: '7',
-    title: 'WALL PANEL',
-    subtitle: 'Decorative Panels',
-    description: 'Stunning stone wall panels featuring intricate chakra designs that add depth, texture, and artistic appeal to any interior space.',
-    smallImage: '/collections/stonesgallerycollections/wallpanelchakrasmall.webp',
-    largeImage: '/collections/stonesgallerycollections/WALLPANELBIG.webp',
-    pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 6
-  },
-  'tulsi-pots': {
-    id: '8',
-    title: 'TULSI POTS',
-    subtitle: 'Sacred Planters',
-    description: 'Handcrafted stone tulsi pots in various sizes and designs. Available in Makrana marble, sandstone, and granite. Perfect for your sacred tulsi plant.',
-    smallImage: '/tulsi pot/makarana marble 25x18x18.jpg',
-    largeImage: '/tulsi pot/custom tulsi pots.jpg',
-    galleryImages: [
-      '/tulsi pot/makarana marble 27x16.jpg',
-      '/tulsi pot/makarana marble 34x15x15.png',
-      '/tulsi pot/sandstone 20x15x15.png',
-      '/tulsi pot/sadarahalli granite 22x17x17.jpg',
-      '/tulsi pot/pink sandstone.jpg',
-      '/tulsi pot/custom tulsi pots1.jpg',
-      '/tulsi pot/custom tulsi pots2.jpg',
-      '/tulsi pot/custom tulsi pots3.jpg',
+    pdfPage: 1,
+    slideshowImages: [
+      '/redsize/dining_and_tables_0068_polished_stone_dining_table.webp',
+      '/redsize/dining_and_tables_0083_large_marble_dining_table.webp',
+      '/redsize/dining_and_tables_0095_agate_stone_dining_table.webp',
+      '/redsize/dining_and_tables_0112_large_marble_dining_table.webp',
+      '/redsize/dining_and_tables_0176_round_stone_dining_table.webp',
+      '/redsize/dining_and_tables_0186_rectangular_marble_dining_table.webp',
+      '/redsize/dining_and_tables_0196_oval_marble_dining_table.webp',
     ]
   },
-  'marble-temples': {
-    id: '9',
-    title: 'MARBLE TEMPLES',
-    subtitle: 'Premium Marble Mandirs',
-    description: 'Exquisite marble temples crafted from premium Makrana and Vietnam marble. Features intricate carvings, mother of pearl inlay, and traditional designs.',
-    smallImage: '/Marble temples/heritage crown mandir.jpg',
+  'idols-and-temples': {
+    id: '2',
+    title: 'IDOLS AND TEMPLES',
+    subtitle: 'Sacred Art & Structures',
+    description: 'Beautifully carved stone idols and exquisite temples that bring spiritual elegance and divine presence to your sacred spaces. From traditional designs to custom creations, each piece is crafted with devotion and attention to detail using premium Makrana marble and fine stone.',
+    smallImage: '/collections/stonesgallerycollections/idolssmall.webp',
     largeImage: '/Marble temples/majestic lotus pavilion.jpg',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 2,
+    slideshowImages: [
+      '/redsize/idols_and_temples_0001_black_stone_buddha_idol.webp',
+      '/redsize/idols_and_temples_0014_white_stone_deity_idol.webp',
+      '/redsize/idols_and_temples_0029_white_and_gold_buddha_idol.webp',
+      '/redsize/idols_and_temples_0043_ornate_marble_temple_structure.webp',
+      '/redsize/idols_and_temples_0048_intricate_marble_temple_shrine.webp',
+      '/redsize/idols_and_temples_0059_large_stone_buddha_statue.webp',
+      '/redsize/idols_and_temples_0222_stone_buddha_relief_panel.webp',
+    ],
     galleryImages: [
+      '/collections/stonesgallerycollections/templessmall.webp',
+      '/Marble temples/heritage crown mandir.jpg',
       '/Marble temples/eternal grace mandir.jpg',
       '/Marble temples/royal heritage shrine.jpg',
       '/Marble temples/shikhar bliss mandir.jpg',
@@ -123,16 +69,8 @@ const collectionsDatabase: Record<string, CollectionData> = {
       '/Marble temples/tranquil marble niche.jpg',
       '/Marble temples/serene lotus alcove.jpg',
       '/Marble temples/blissful sanctuary mandap.jpg',
-    ]
-  },
-  'customised-temples': {
-    id: '10',
-    title: 'CUSTOMISED TEMPLES',
-    subtitle: 'Bespoke Designs',
-    description: 'Custom-designed temples tailored to your specific requirements. From modern minimalist to traditional ornate designs, we create sacred spaces that reflect your vision.',
-    smallImage: '/Customised Temples/divine majesty mandir.jpg',
-    largeImage: '/Customised Temples/grand heritage mandap.jpg',
-    galleryImages: [
+      '/Customised Temples/divine majesty mandir.jpg',
+      '/Customised Temples/grand heritage mandap.jpg',
       '/Customised Temples/celestial serenity mandap.jpg',
       '/Customised Temples/golden grace temple.jpg',
       '/Customised Temples/peacock splendor mandap.jpg',
@@ -143,15 +81,77 @@ const collectionsDatabase: Record<string, CollectionData> = {
       '/Customised Temples/lotus entrance mandap.jpg',
     ]
   },
-  'marble-sinks': {
-    id: '11',
-    title: 'MARBLE SINKS',
-    subtitle: 'Premium Bathroom Fixtures',
-    description: 'Exquisite marble sinks crafted from premium marble with elegant designs. Perfect for modern and traditional bathrooms, adding luxury and sophistication to your spaces.',
-    smallImage: '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0001.jpg',
-    largeImage: '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0020.jpg',
+  'home-decor': {
+    id: '3',
+    title: 'HOME DECOR',
+    subtitle: 'Contemporary & Garden Elegance',
+    description: 'Experience the fusion of traditional stone craftsmanship with modern artistic expression. From contemporary indoor pieces to stunning outdoor sculptures, tulsi pots, and premium marble sinks, each piece adds timeless beauty and sophistication to your living spaces.',
+    smallImage: '/collections/stonesgallerycollections/modernartsmall.webp',
+    largeImage: '/collections/stonesgallerycollections/MODERNARTBIG.webp',
     pdfUrl: '/collections/allproductsareinthis.pdf',
-    pdfPage: 5
+    pdfPage: 7,
+    slideshowImages: [
+      '/redsize/home_decor_0012_ornate_carved_stone_wall.webp',
+      '/redsize/home_decor_0064_carved_stone_lion_sculpture.webp',
+      '/redsize/home_decor_0160_stone_freestanding_wash_basin.webp',
+      '/redsize/home_decor_0296_decorative_stone_lady_sculptures.webp',
+      '/redsize/home_decor_0322_large_striped_stone_vase.webp',
+      '/redsize/home_decor_0329_stone_wash_basins_displayed.webp',
+    ],
+    galleryImages: [
+      '/collections/stonesgallerycollections/gardendecorsmall.webp',
+      '/collections/stonesgallerycollections/gardendecorbig.webp',
+      '/tulsi pot/makarana marble 25x18x18.jpg',
+      '/tulsi pot/custom tulsi pots.jpg',
+      '/tulsi pot/makarana marble 27x16.jpg',
+      '/tulsi pot/makarana marble 34x15x15.png',
+      '/tulsi pot/sandstone 20x15x15.png',
+      '/tulsi pot/sadarahalli granite 22x17x17.jpg',
+      '/tulsi pot/pink sandstone.jpg',
+      '/tulsi pot/custom tulsi pots1.jpg',
+      '/tulsi pot/custom tulsi pots2.jpg',
+      '/tulsi pot/custom tulsi pots3.jpg',
+      '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0001.jpg',
+      '/marblesinks/DISH IMPEX MARBLE SINKS WITH PRICE (3) (1)_page-0020.jpg',
+    ]
+  },
+  'fountain': {
+    id: '4',
+    title: 'FOUNTAIN',
+    subtitle: 'Water Features',
+    description: 'Magnificent stone fountains that add a touch of luxury and tranquility to any space. The perfect centerpiece for gardens and courtyards.',
+    smallImage: '/collections/stonesgallerycollections/fountainsmall.webp',
+    largeImage: '/collections/stonesgallerycollections/fountainbig.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 8,
+    slideshowImages: [
+      '/redsize/fountain_0208_ornate_carved_stone_fountain.webp',
+      '/redsize/fountain_0209_ornate_tiered_stone_fountain.webp',
+      '/redsize/fountain_0210_ornate_tiered_stone_fountain.webp',
+      '/redsize/fountain_0211_ornate_tiered_stone_fountains.webp',
+      '/redsize/fountain_0212_carved_multitier_stone_fountains.webp',
+      '/redsize/fountain_0213_tiered_stone_decorative_fountains.webp',
+    ]
+  },
+  'wall-cladding': {
+    id: '5',
+    title: 'WALL CLADDING',
+    subtitle: 'Decorative Panels',
+    description: 'Stunning stone wall cladding featuring intricate chakra designs that add depth, texture, and artistic appeal to any interior space. Transform your walls into masterpieces.',
+    smallImage: '/collections/stonesgallerycollections/wallpanelchakrasmall.webp',
+    largeImage: '/collections/stonesgallerycollections/WALLPANELBIG.webp',
+    pdfUrl: '/collections/allproductsareinthis.pdf',
+    pdfPage: 6,
+    slideshowImages: [
+      '/redsize/stone_cladding_0214_stone_carved_tree_panel.webp',
+      '/redsize/stone_cladding_0228_textured_stone_wall_panels.webp',
+      '/redsize/stone_cladding_0259_3d_textured_wall_panels.webp',
+      '/redsize/stone_cladding_0286_intricately_carved_stone_panel.webp',
+      '/wallpanelandinlays/wall cladding_page-0010.jpg',
+      '/wallpanelandinlays/wall cladding_page-0025.jpg',
+      '/wallpanelandinlays/wall cladding_page-0040.jpg',
+      '/wallpanelandinlays/wall cladding_page-0055.jpg',
+    ]
   }
 };
 
@@ -159,12 +159,30 @@ interface CollectionDetailProps {
   slug?: string;
 }
 
-const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-table' }) => {
-  const collection = collectionsDatabase[slug] || collectionsDatabase['dining-table'];
+const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tables' }) => {
+  const collection = collectionsDatabase[slug] || collectionsDatabase['dining-tables'];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showPdfViewer, setShowPdfViewer] = useState(false);
   const [showWallPanelGallery, setShowWallPanelGallery] = useState(false);
   const [showMarbleSinksGallery, setShowMarbleSinksGallery] = useState(false);
+  const [showCollectionGallery, setShowCollectionGallery] = useState(false);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!collection.slideshowImages || collection.slideshowImages.length === 0 || isHovering) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setCurrentSlideIndex((prev) => 
+        (prev + 1) % collection.slideshowImages!.length
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [collection.slideshowImages, isHovering]);
 
   const collectionSlugs = Object.keys(collectionsDatabase);
   const currentIndex = collectionSlugs.indexOf(slug);
@@ -173,17 +191,27 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
   const prevCollection = collectionSlugs[(currentIndex - 1 + collectionSlugs.length) % collectionSlugs.length];
 
   const handleViewCatalog = () => {
-    if (slug === 'wall-panel') {
-      setShowWallPanelGallery(true);
-    } else if (slug === 'marble-sinks') {
-      setShowMarbleSinksGallery(true);
-    } else if (collection.pdfUrl) {
-      setShowPdfViewer(true);
-    }
+    // Show collection gallery for all collections
+    setShowCollectionGallery(true);
   };
+
+  // Get the current image to display (slideshow or default)
+  const displayImage = collection.slideshowImages && collection.slideshowImages.length > 0
+    ? collection.slideshowImages[currentSlideIndex]
+    : collection.largeImage;
+
+  // Determine if this collection needs rotation
+  const needsRotation = ['idols-and-temples', 'home-decor', 'fountain'].includes(slug);
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Collection Gallery - New Unified Gallery */}
+      <CollectionGallery 
+        isOpen={showCollectionGallery} 
+        onClose={() => setShowCollectionGallery(false)}
+        collectionSlug={slug}
+      />
+
       {/* Wall Panel Gallery */}
       <WallPanelGallery 
         isOpen={showWallPanelGallery} 
@@ -294,19 +322,46 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
               </div>
             </div>
 
-            {/* Right Side - Large Image */}
-            <div className="relative h-96 md:h-[600px] rounded-lg overflow-hidden shadow-2xl order-1 md:order-2">
-              <Image
-                src={collection.largeImage}
-                alt={collection.title}
-                fill
-                className={`object-contain transition-all duration-700 ${
-                  imageLoaded ? 'scale-100 blur-0' : 'scale-110 blur-sm'
-                }`}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                onLoadingComplete={() => setImageLoaded(true)}
-                priority
-              />
+            {/* Right Side - Large Image with Slideshow */}
+            <div 
+              className="relative h-[400px] md:h-[600px] rounded-lg overflow-visible shadow-2xl order-1 md:order-2 flex items-center justify-center"
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                <img
+                  src={displayImage}
+                  alt={collection.title}
+                  className={`max-w-full max-h-full w-auto h-auto object-contain transition-opacity duration-700 ${
+                    imageLoaded ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  onLoad={() => setImageLoaded(true)}
+                  style={{ 
+                    imageOrientation: 'from-image',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    transform: needsRotation ? 'rotate(-90deg)' : 'none'
+                  }}
+                />
+              </div>
+              
+              {/* Slideshow indicators - only show if there are slideshow images */}
+              {collection.slideshowImages && collection.slideshowImages.length > 1 && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                  {collection.slideshowImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlideIndex(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlideIndex
+                          ? 'bg-stone-800 w-8'
+                          : 'bg-stone-400 w-2 hover:bg-stone-600'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 

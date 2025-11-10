@@ -30,7 +30,7 @@ const jaipurSchema = {
     longitude: "75.7794"
   },
   telephone: "+91-9035664747",
-  email: "jaipur@stonesgallery.in",
+  email: "dishimpex@gmail.com",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -141,7 +141,7 @@ export default function JaipurLocationPage() {
                   <strong>Phone:</strong><br />
                   <a href="tel:+919035664747" className="text-stone-900 hover:underline">+91 90356 64747</a><br />
                   <strong className="mt-2 block">Email:</strong><br />
-                  <a href="mailto:jaipur@stonesgallery.in" className="text-stone-900 hover:underline">jaipur@stonesgallery.in</a>
+                  <a href="mailto:dishimpex@gmail.com" className="text-stone-900 hover:underline">dishimpex@gmail.com</a>
                 </p>
               </div>
             </div>

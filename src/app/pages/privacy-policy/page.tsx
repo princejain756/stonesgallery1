@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Withdraw Consent:</strong> Opt-out of marketing emails, WhatsApp messages, or other consented communications</li>
             </ul>
             <p className="text-stone-700 leading-relaxed">
-              To exercise your rights, email us at <a href="mailto:privacy@stonesgallery.in" className="text-stone-900 underline font-semibold">privacy@stonesgallery.in</a> or WhatsApp +91 90356 64747. We will respond within 30 days.
+              To exercise your rights, email us at <a href="mailto:dishimpex@gmail.com" className="text-stone-900 underline font-semibold">dishimpex@gmail.com</a> or WhatsApp +91 90356 64747. We will respond within 30 days.
             </p>
 
             {/* 8. Cookies Policy */}
@@ -235,7 +235,7 @@ export default function PrivacyPolicyPage() {
             <div className="bg-stone-100 border-l-4 border-stone-800 p-6 mb-6">
               <p className="font-semibold text-stone-900 mb-2">Stones Gallery (Dish Impex LLP)</p>
               <p className="text-stone-700">
-                <strong>Email:</strong> <a href="mailto:privacy@stonesgallery.in" className="text-stone-900 underline">privacy@stonesgallery.in</a>
+                <strong>Email:</strong> <a href="mailto:dishimpex@gmail.com" className="text-stone-900 underline">dishimpex@gmail.com</a>
               </p>
               <p className="text-stone-700">
                 <strong>WhatsApp:</strong> +91 90356 64747
@@ -280,7 +280,7 @@ export default function PrivacyPolicyPage() {
             We're here to address your concerns and protect your data rights.
           </p>
           <a
-            href="mailto:privacy@stonesgallery.in"
+            href="mailto:dishimpex@gmail.com"
             className="inline-block bg-white hover:bg-stone-100 text-stone-900 font-semibold px-8 py-3 rounded-lg transition-colors"
           >
             Contact Privacy Team
