@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
     title: "Inside Our Jigani Workshop: Temple Sculptures & Marble Idols",
     summary:
       "How master artisans craft mandir marble idols, deity murals, and sculpted temple accessories for projects in Bengaluru and overseas.",
-    coverImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/showroomimage.webp",
     heroAlt: "Artisan chiseling a marble idol inside the Jigani workshop",
     readTime: "7 min read",
     publishedOn: "Dec 2024",

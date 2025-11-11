@@ -6,6 +6,7 @@ import WhereArtMeetsEngineering from '@/components/sections/where-art-meets-engi
 import LiveTheExperience from '@/components/sections/live-the-experience';
 import FeaturedCollections from '@/components/sections/featured-collections';
 import BlogInsights from '@/components/sections/blog-insights';
+import Showroom3DView from '@/components/sections/showroom-3d-view';
 
 // Enhanced homepage structured data
 const homepageOfferCatalog = {
@@ -66,6 +67,7 @@ export default function HomePage() {
       <LiveTheExperience />
       <FeaturedCollections />
       <BlogInsights />
+      <Showroom3DView />
       
       <Script id="homepage-offer-catalog" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homepageOfferCatalog)}
