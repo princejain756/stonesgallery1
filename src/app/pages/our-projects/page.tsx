@@ -78,13 +78,6 @@ const marbleTempleProjects = [
   { src: '/Marble temples/royal heritage shrine.jpg', title: 'Royal Heritage Shrine' },
 ];
 
-// Production Facility Images
-const productionImages = [
-  { src: '/bangaloreshowroom.webp', title: 'Bangalore Production Facility' },
-  { src: '/bangaloreshowroom2.webp', title: 'Bangalore Showroom Interior' },
-  { src: '/bangaloreshowroom3.webp', title: 'Bangalore Fabrication Unit' },
-];
-
 export default function OurProjectsPage() {
   return (
     <main className="min-h-screen bg-white text-[#8d8986]">
@@ -168,35 +161,6 @@ export default function OurProjectsPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Production Facilities */}
-      <section className="mx-auto max-w-[1400px] px-5 py-16 md:py-24">
-        <div className="mb-12 text-center">
-          <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-4">
-            Our Production Facilities
-          </h2>
-          <p className="text-base text-[#8d8986] max-w-2xl mx-auto">
-            State-of-the-art facilities in Bangalore, equipped with modern technology and skilled artisans.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {productionImages.map((img, i) => (
-            <div key={i} className="relative aspect-[4/3] overflow-hidden shadow-lg">
-              <Image 
-                src={img.src} 
-                alt={img.title}
-                fill 
-                className="object-cover hover:scale-105 transition-transform duration-500" 
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-                <p className="text-sm md:text-base tracking-wider">{img.title}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

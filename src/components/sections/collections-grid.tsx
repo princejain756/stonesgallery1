@@ -11,7 +11,7 @@ interface Collection {
 const collectionsData: Collection[] = [
   {
     title: "DINING TABLES",
-    imageUrl: "/collections/stonesgallerycollections/DININGTABLESBIG.webp",
+    imageUrl: "/collections/stonesgallerycollections/diningtablebig.webp",
     heightClass: "h-[500px]",
     slug: "dining-tables"
   },
@@ -23,7 +23,7 @@ const collectionsData: Collection[] = [
   },
   {
     title: "HOME DECOR",
-    imageUrl: "/collections/stonesgallerycollections/MODERNARTBIG.webp",
+    imageUrl: "/collections/stonesgallerycollections/modernartbig.webp",
     heightClass: "h-[500px]",
     slug: "home-decor"
   },

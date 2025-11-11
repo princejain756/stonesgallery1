@@ -39,7 +39,7 @@ const breadcrumbSchema = {
 export const metadata: Metadata = {
   title: 'Our Services – Stones Gallery by Dish Impex LLP',
   description:
-    'Stones Gallery offers customized natural stone solutions with creative and agile service. We provide environmentally sustainable products from our production facilities in Jaipur and Makrana.',
+      'Stones Gallery offers customized natural stone solutions with creative and agile service. We provide environmentally sustainable products.',
   keywords: [
     'stones gallery services',
     'custom stone solutions',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Services – Stones Gallery',
     description:
-      'Creative and agile stone solutions. Customized products from our facilities in Jaipur and Makrana.',
+      'Creative and agile stone solutions. Customized products for your stone dreams.',
     url: 'https://stonesgallery.in/pages/our-services',
     type: 'website',
   },
@@ -83,51 +83,51 @@ export default function OurServicesPage() {
           We are creative and agile. We are responsive and committed to environmentally sustainable products.
         </p>
         <p className="mb-6 text-base leading-7">
-          Stones Gallery offers customized solutions to satisfy customer's requirement and to make their stone dreams come alive. We have our production facility at stone city of Rajasthan – Jaipur and Makrana.
+          Stones Gallery offers customized solutions to satisfy customer's requirement and to make their stone dreams come alive.
         </p>
         <p className="text-base leading-7">
           Do visit our store to experience our range of stunning products.
         </p>
       </section>
 
-      {/* Production Facilities Images */}
+      {/* Our Facilities Images */}
       <section className="mx-auto max-w-[1100px] px-5 py-10 md:py-16">
         <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-8 text-center">Our Facilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/bangaloreshowroom.webp"
-              alt="Stones Gallery Bangalore Showroom"
+              src="/showroomimage.webp"
+              alt="Stones Gallery Showroom"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-              <p className="text-sm md:text-base font-medium">Bangalore Showroom</p>
+              <p className="text-sm md:text-base font-medium">Showroom</p>
             </div>
           </div>
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/bangaloreshowroom2.webp"
-              alt="Stones Gallery Bangalore Production Facility"
+              src="/showroomimagebottom.webp"
+              alt="Stones Gallery Showroom Bottom View"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-              <p className="text-sm md:text-base font-medium">Bangalore Production Facility</p>
+              <p className="text-sm md:text-base font-medium">Showroom Interior</p>
             </div>
           </div>
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/bangaloreshowroom3.webp"
-              alt="Stones Gallery Bangalore Fabrication Unit"
+              src="/showroomimage3.webp"
+              alt="Stones Gallery Showroom Additional View"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-              <p className="text-sm md:text-base font-medium">Fabrication Unit</p>
+              <p className="text-sm md:text-base font-medium">Showroom Display</p>
             </div>
           </div>
         </div>
@@ -146,22 +146,7 @@ export default function OurServicesPage() {
                 <div>
                   <h3 className="text-lg font-medium text-[#444] mb-2">Store Location</h3>
                   <p className="text-base text-[#8d8986] leading-relaxed">
-                    Jigani, Bangalore<br />
-                    Karnataka, India
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium text-[#444] mb-3">Production Facilities</h3>
-                <div className="space-y-3 text-base text-[#8d8986]">
-                  <p className="flex items-start gap-2">
-                    <span className="text-[#444]">•</span>
-                    <span>Jaipur, Rajasthan</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <span className="text-[#444]">•</span>
-                    <span>Makrana, Rajasthan</span>
+                    DISH IMPEX LLP, Sy.no, 16/2, hobli, begihalli village, taluk, Jigani, Anekal, Karnataka 560105
                   </p>
                 </div>
               </div>

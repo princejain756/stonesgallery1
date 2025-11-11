@@ -1,9 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { X, Send } from 'lucide-react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -18,29 +16,9 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const Chatbot: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-
-  const handleSendMessage = () => {
-    if (!inputValue.trim()) {
-      // If no message, open WhatsApp directly
-      window.open('https://wa.me/919876543210', '_blank');
-    } else {
-      // Open WhatsApp with the typed message
-      const encodedMessage = encodeURIComponent(inputValue);
-      window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
-    }
-    
-    // Reset input and close modal
-    setInputValue('');
-    setIsOpen(false);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
+  const handleWhatsAppRedirect = () => {
+    const message = encodeURIComponent("HI ,STONES GALLERY");
+    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
   };
 
   return (
@@ -48,94 +26,14 @@ const Chatbot: React.FC = () => {
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleWhatsAppRedirect}
           className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 hover:scale-110"
           size="icon"
-          aria-label={isOpen ? "Close WhatsApp chat" : "Open WhatsApp chat"}
+          aria-label="Chat on WhatsApp"
         >
-          {isOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <WhatsAppIcon className="h-7 w-7" />
-          )}
+          <WhatsAppIcon className="h-7 w-7" />
         </Button>
       </div>
-
-      {/* WhatsApp Chat Window */}
-      {isOpen && (
-        <div className="fixed bottom-24 right-6 w-full max-w-md bg-white rounded-2xl shadow-2xl border border-stone-200 z-40 flex flex-col overflow-hidden">
-          {/* Header with WhatsApp green */}
-          <div className="relative h-32 bg-green-500 rounded-t-2xl overflow-hidden">
-            {/* Close button */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-3 right-3 z-10 bg-black/20 hover:bg-black/40 p-2 rounded-full transition"
-            >
-              <X className="h-5 w-5 text-white" />
-            </button>
-
-            {/* Content */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
-              <WhatsAppIcon className="h-12 w-12 mb-3" />
-              <h2 className="text-xl font-bold mb-1">Chat with us on WhatsApp</h2>
-              <p className="text-sm text-green-50">We'll respond as soon as possible</p>
-            </div>
-          </div>
-
-          {/* Content Area */}
-          <div className="flex-1 p-6 flex flex-col justify-center items-center text-center">
-            <p className="text-sm text-stone-600 mb-6">
-              Type your message below or click "Send" to start chatting with us on WhatsApp
-            </p>
-            
-            {/* Quick message suggestions */}
-            <div className="w-full space-y-2 mb-6">
-              <button
-                onClick={() => setInputValue("Hello! I'd like to know more about your stone collections.")}
-                className="w-full text-left text-sm p-3 border border-stone-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition"
-              >
-                💬 Ask about collections
-              </button>
-              <button
-                onClick={() => setInputValue("I need a quote for my project.")}
-                className="w-full text-left text-sm p-3 border border-stone-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition"
-              >
-                💰 Request a quote
-              </button>
-              <button
-                onClick={() => setInputValue("I'd like to visit your store.")}
-                className="w-full text-left text-sm p-3 border border-stone-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition"
-              >
-                📍 Visit store location
-              </button>
-            </div>
-          </div>
-
-          {/* Input */}
-          <div className="p-4 border-t border-stone-200 bg-stone-50">
-            <div className="flex gap-2">
-              <Input
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Type your message..."
-                className="flex-1 text-sm bg-white"
-              />
-              <Button
-                onClick={handleSendMessage}
-                size="sm"
-                className="bg-green-500 hover:bg-green-600 px-6"
-              >
-                <Send className="h-4 w-4 mr-1" />
-                Send
-              </Button>
-            </div>
-            <p className="text-xs text-stone-500 mt-2 text-center">
-              This will open WhatsApp to continue the conversation
-            </p>
-          </div>
-        </div>
-      )}
     </>
   );
 };

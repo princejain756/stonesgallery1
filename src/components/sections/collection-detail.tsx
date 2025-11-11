@@ -26,8 +26,8 @@ const collectionsDatabase: Record<string, CollectionData> = {
     title: 'DINING TABLES',
     subtitle: 'Elegant Stone Tables',
     description: 'Transform your dining space with our exquisite collection of handcrafted stone dining tables. Each piece is a masterwork of natural beauty and artisan craftsmanship.',
-    smallImage: '/collections/stonesgallerycollections/diningtablessmall.webp',
-    largeImage: '/collections/stonesgallerycollections/DININGTABLESBIG.webp',
+    smallImage: '/collections/stonesgallerycollections/diningtablesmall.webp',
+    largeImage: '/collections/stonesgallerycollections/diningtablebig.webp',
     pdfUrl: '/collections/allproductsareinthis.pdf',
     pdfPage: 1,
     slideshowImages: [
@@ -87,7 +87,7 @@ const collectionsDatabase: Record<string, CollectionData> = {
     subtitle: 'Contemporary & Garden Elegance',
     description: 'Experience the fusion of traditional stone craftsmanship with modern artistic expression. From contemporary indoor pieces to stunning outdoor sculptures, tulsi pots, and premium marble sinks, each piece adds timeless beauty and sophistication to your living spaces.',
     smallImage: '/collections/stonesgallerycollections/modernartsmall.webp',
-    largeImage: '/collections/stonesgallerycollections/MODERNARTBIG.webp',
+    largeImage: '/collections/stonesgallerycollections/modernartbig.webp',
     pdfUrl: '/collections/allproductsareinthis.pdf',
     pdfPage: 7,
     slideshowImages: [
