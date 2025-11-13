@@ -146,7 +146,7 @@ export default function AboutPage() {
                 </div>
 
                 <a
-                  href="https://wa.me/919035664747?text=Hi%20Taruna%2C%20I'd%20like%20to%20discuss%20a%20project."
+                  href="https://wa.me/919448987711?text=Hi%20Taruna%2C%20I'd%20like%20to%20discuss%20a%20project."
                   className="inline-block bg-stone-900 hover:bg-stone-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
                 >
                   Connect with Taruna
@@ -348,10 +348,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919035664747?text=Hi%20Stones%20Gallery%2C%20I'd%20like%20to%20discuss%20my%20project."
+              href="https://wa.me/919448987711?text=Hi%20Stones%20Gallery%2C%20I'd%20like%20to%20discuss%20my%20project."
               className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
             >
-              WhatsApp: +91 90356 64747
+              WhatsApp: +91 94489 87711
             </a>
             <Link
               href="/pages/our-collection"

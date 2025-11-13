@@ -99,7 +99,7 @@ export default function Header() {
               </div>
               <div className="w-1/3 flex justify-end items-center gap-4">
                 <a
-                  href="https://wa.me/919035664747?text=Hi%2C%20Stones%20Gallery"
+                  href="https://wa.me/919448987711?text=Hi%2C%20Stones%20Gallery"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -146,7 +146,7 @@ export default function Header() {
             </Link>
             <div className="flex items-center gap-4">
               <a
-                href="https://wa.me/919035664747?text=Hi%2C%20Stones%20Gallery"
+                href="https://wa.me/919448987711?text=Hi%2C%20Stones%20Gallery"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"

@@ -82,7 +82,7 @@ export default function JaipurLocationPage() {
                 Get Directions
               </a>
               <a
-                href="https://wa.me/919035664747?text=I'd like to visit your Jaipur facility"
+                href="https://wa.me/919448987711?text=I'd like to visit your Jaipur facility"
                 className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
               >
                 Schedule Factory Tour
@@ -139,7 +139,7 @@ export default function JaipurLocationPage() {
                 <h3 className="text-xl font-bold text-stone-900 mb-3">Contact</h3>
                 <p className="text-stone-700 leading-relaxed">
                   <strong>Phone:</strong><br />
-                  <a href="tel:+919035664747" className="text-stone-900 hover:underline">+91 90356 64747</a><br />
+                  <a href="tel:+919448987711" className="text-stone-900 hover:underline">+91 94489 87711</a><br />
                   <strong className="mt-2 block">Email:</strong><br />
                   <a href="mailto:dishimpex@gmail.com" className="text-stone-900 hover:underline">dishimpex@gmail.com</a>
                 </p>
@@ -359,7 +359,7 @@ export default function JaipurLocationPage() {
               Experience our manufacturing process firsthand. Book your factory tour today!
             </p>
             <a
-              href="https://wa.me/919035664747?text=I'd like to schedule a visit to your Jaipur factory"
+              href="https://wa.me/919448987711?text=I'd like to schedule a visit to your Jaipur factory"
               className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-10 py-4 rounded-lg transition-colors text-lg"
             >
               Schedule Your Factory Tour on WhatsApp

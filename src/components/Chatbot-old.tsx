@@ -35,11 +35,11 @@ const Chatbot: React.FC = () => {
   const handleSendMessage = () => {
     if (!inputValue.trim()) {
       // If no message, open WhatsApp directly
-      window.open('https://wa.me/919876543210', '_blank');
+      window.open('https://wa.me/919448987711', '_blank');
     } else {
       // Open WhatsApp with the typed message
       const encodedMessage = encodeURIComponent(inputValue);
-      window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+      window.open(`https://wa.me/919448987711?text=${encodedMessage}`, '_blank');
     }
     
     // Reset input and close modal

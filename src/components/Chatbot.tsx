@@ -18,7 +18,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 const Chatbot: React.FC = () => {
   const handleWhatsAppRedirect = () => {
     const message = encodeURIComponent("HI ,STONES GALLERY");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/919448987711?text=${message}`, '_blank');
   };
 
   return (

@@ -92,10 +92,10 @@ export default function NotFound() {
               Chat with our stone experts on WhatsApp
             </p>
             <a
-              href="https://wa.me/919035664747?text=Hi%20Stones%20Gallery%2C%20I%20need%20assistance."
+              href="https://wa.me/919448987711?text=Hi%20Stones%20Gallery%2C%20I%20need%20assistance."
               className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
             >
-              WhatsApp: +91 90356 64747
+              WhatsApp: +91 94489 87711
             </a>
           </div>
 

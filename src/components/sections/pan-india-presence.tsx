@@ -91,7 +91,7 @@ const PanIndiaPresence = () => {
                 metro. Our merchandisers respond within 12 working hours.
               </p>
               <a
-                href="https://wa.me/919035664747?text=Hi%20Stones%20Gallery%2C%20I%20need%20marble%20%2F%20granite%20for%20my%20project."
+                href="https://wa.me/919448987711?text=Hi%20Stones%20Gallery%2C%20I%20need%20marble%20%2F%20granite%20for%20my%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center border border-emerald-400 px-4 py-2 text-xs uppercase tracking-[0.3em] text-emerald-200 hover:bg-emerald-400/10"

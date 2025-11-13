@@ -92,7 +92,7 @@ export default async function BlogPage() {
                 Share drawings or tap the WhatsApp line for real-time assistance.
               </p>
               <a
-                href="https://wa.me/919035664747?text=Hi%20Stones%20Gallery%2C%20share%20granite%20or%20marble%20ideas%20for%20my%20project."
+                href="https://wa.me/919448987711?text=Hi%20Stones%20Gallery%2C%20share%20granite%20or%20marble%20ideas%20for%20my%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border border-emerald-400 px-5 py-3 text-xs uppercase tracking-[0.3em] text-emerald-200 transition hover:bg-emerald-400/10"

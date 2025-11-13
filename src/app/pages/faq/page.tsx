@@ -112,10 +112,10 @@ export default function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/919035664747?text=Hi%20Stones%20Gallery%2C%20I%20have%20questions%20about%20marble%20and%20granite."
+                href="https://wa.me/919448987711?text=Hi%20Stones%20Gallery%2C%20I%20have%20questions%20about%20marble%20and%20granite."
                 className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
               >
-                WhatsApp: +91 90356 64747
+                WhatsApp: +91 94489 87711
               </a>
               <a
                 href="/pages/contact-us"
