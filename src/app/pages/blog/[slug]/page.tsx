@@ -170,13 +170,13 @@ export default function BlogDetailPage({ params }: { params: BlogParams }) {
           )}
           <div className="space-y-3">
             <Link
-              href="/pages/contact-us"
+              href="/pages/our-contact"
               className="block border border-white/60 px-4 py-3 text-center text-xs uppercase tracking-[0.3em] hover:bg-white/10"
             >
               Talk to a stone expert
             </Link>
             <Link
-              href="/pages/our-services"
+              href="/pages/our-contact"
               className="block border border-white/20 px-4 py-3 text-center text-xs uppercase tracking-[0.3em] hover:border-white"
             >
               View services

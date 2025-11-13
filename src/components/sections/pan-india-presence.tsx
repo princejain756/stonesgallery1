@@ -30,7 +30,7 @@ const PanIndiaPresence = () => {
             </p>
           </div>
           <Link
-            href="/pages/contact-us"
+            href="/pages/our-contact"
             className="inline-flex items-center gap-2 border border-white/40 px-6 py-3 text-xs uppercase tracking-[0.3em] hover:bg-white/10"
           >
             Share project brief
@@ -85,7 +85,7 @@ const PanIndiaPresence = () => {
           <div className="space-y-6">
             <div className="rounded-lg border border-white/15 bg-white/5 p-6">
               <p className="text-xs uppercase tracking-[0.4em] text-white/60">WhatsApp hotline</p>
-              <h3 className="mt-2 text-xl font-light tracking-[0.2em]">+91 90356 64747</h3>
+              <h3 className="mt-2 text-xl font-light tracking-[0.2em]">+91 94489 87711</h3>
               <p className="mt-2 text-sm text-white/70">
                 Share drawings from Jaipur, Delhi, Mumbai, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, Kochi, or any
                 metro. Our merchandisers respond within 12 working hours.

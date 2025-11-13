@@ -92,7 +92,7 @@ export const faqs: FAQ[] = [
   {
     category: 'location',
     question: 'Where are your showrooms and factories located?',
-    answer: 'North India: Jaipur, Rajasthan - Near Kurkure Factory, Mokhampura Choraha, Jaipur-Kishangarh-Ajmer NH (showroom + factory). South India: Tamil Nadu - Krishnagiri District, Pillaikothur Village, Konerpalli Post (processing facility). Bangalore: Virtual showroom at Jigani Industrial Area with samples. Book appointments via WhatsApp: +91 90356 64747.'
+    answer: 'North India: Jaipur, Rajasthan - Near Kurkure Factory, Mokhampura Choraha, Jaipur-Kishangarh-Ajmer NH (showroom + factory). South India: Tamil Nadu - Krishnagiri District, Pillaikothur Village, Konerpalli Post (processing facility). Bangalore: Virtual showroom at Jigani Industrial Area with samples. Book appointments via WhatsApp: +91 94489 87711.'
   },
   {
     category: 'location',

@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       label: "Book an Export Consultation",
-      href: "/pages/contact-us",
+      href: "/pages/our-contact",
     },
     seo: {
       title: "Natural Stone Exporter India | Stones Gallery",

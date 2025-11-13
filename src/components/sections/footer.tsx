@@ -5,11 +5,11 @@ const navLinks = [
   { href: "/pages/our-story", label: "OUR STORY" },
   { href: "/pages/our-collection", label: "OUR COLLECTIONS" },
   { href: "/pages/our-projects", label: "OUR PROJECTS" },
-  { href: "/pages/our-services", label: "OUR SERVICES" },
+  { href: "/pages/our-contact", label: "OUR CONTACT" },
 ];
 
 const socialIcons = [
-  { href: 'https://www.instagram.com/dishimpexllp/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/instagram_icon-5.svg', alt: 'Instagram' },
+  { href: 'https://www.instagram.com/miraclestonex24/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/instagram_icon-5.svg', alt: 'Instagram' },
   { href: 'https://m.facebook.com/NivasaHome/', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/facebook_icon-6.svg', alt: 'Facebook' },
   { href: 'https://www.linkedin.com/company/nivasa-home', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/linkedin_icon-7.svg', alt: 'LinkedIn' },
   { href: 'https://youtube.com/channel/UCfpaFEH02b2VMOu2I3yQ-Xg', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/604c8d9d-25d9-4b31-97a8-25b3962c55db-nivasa-com/assets/svgs/youTube_icon-8.svg', alt: 'YouTube' },

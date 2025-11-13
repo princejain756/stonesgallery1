@@ -41,7 +41,7 @@ export default function ServicesHero() {
 
       {/* Bottom center CTA */}
       <Link
-        href="/pages/our-services"
+        href="/pages/our-contact"
         className="absolute bottom-[8%] left-1/2 z-30 -translate-x-1/2 border-2 border-white bg-transparent px-8 py-3 text-center text-sm md:text-xs uppercase tracking-[0.15em] text-white transition-colors hover:bg-white/10 md:px-12"
       >
         OUR SERVICES

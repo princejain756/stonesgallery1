@@ -263,7 +263,7 @@ export function generateOrganizationSchema() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-9876543210',
+        telephone: '+91-94489-87711',
         contactType: 'customer service',
         email: 'dishimpex@gmail.com',
         areaServed: 'IN',
@@ -271,7 +271,7 @@ export function generateOrganizationSchema() {
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+91-9876543210',
+        telephone: '+91-94489-87711',
         contactType: 'sales',
         email: 'dishimpex@gmail.com',
         areaServed: 'IN',

@@ -259,7 +259,7 @@ const JourneyStorytelling: React.FC = () => {
                 Let's create something extraordinary together. Your masterpiece awaits.
               </p>
               <a
-                href="/pages/contact-us"
+                href="/pages/our-contact"
                 className="inline-block px-10 py-4 bg-white text-stone-900 hover:bg-stone-100 transition-all duration-300 tracking-wider text-sm md:text-base font-medium"
               >
                 START YOUR JOURNEY

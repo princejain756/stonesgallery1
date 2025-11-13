@@ -174,7 +174,7 @@ export default function OurProjectsPage() {
             From concept to completion, we bring your vision to life with exceptional craftsmanship and attention to detail.
           </p>
           <a
-            href="/pages/contact-us"
+            href="/pages/our-contact"
             className="inline-block border-2 border-white px-10 py-4 text-sm uppercase tracking-[0.15em] hover:bg-white hover:text-stone-900 transition-colors duration-300"
           >
             Start Your Project

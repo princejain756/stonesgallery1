@@ -29,7 +29,7 @@ const jaipurSchema = {
     latitude: "26.8467",
     longitude: "75.7794"
   },
-  telephone: "+91-9035664747",
+  telephone: "+91-94489-87711",
   email: "dishimpex@gmail.com",
   openingHoursSpecification: [
     {

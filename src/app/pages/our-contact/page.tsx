@@ -17,7 +17,7 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'Stones Gallery by Dish Impex LLP',
-    telephone: '+91-9035664747',
+    telephone: '+91-94489-87711',
     areaServed: ['Bangalore', 'Jaipur', 'Makrana', 'India'],
   },
 };
@@ -35,13 +35,13 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Services & Contact',
-      item: 'https://stonesgallery.in/pages/our-services',
+      name: 'Our Contact',
+      item: 'https://stonesgallery.in/pages/our-contact',
     },
   ],
 };
 
-export default function OurServicesPage() {
+export default function OurContactPage() {
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -75,7 +75,7 @@ export default function OurServicesPage() {
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-end justify-center pb-12">
-          <h1 className="text-white tracking-[0.3em] text-2xl md:text-3xl uppercase">Services & Contact</h1>
+          <h1 className="text-white tracking-[0.3em] text-2xl md:text-3xl uppercase">Our Contact</h1>
         </div>
       </section>
 
@@ -295,10 +295,10 @@ export default function OurServicesPage() {
       </section>
 
       {/* Schema Markup */}
-      <Script id="our-services-breadcrumb" type="application/ld+json" strategy="afterInteractive">
+      <Script id="our-contact-breadcrumb" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(breadcrumbSchema)}
       </Script>
-      <Script id="our-services-schema" type="application/ld+json" strategy="afterInteractive">
+      <Script id="our-contact-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(serviceSchema)}
       </Script>
     </main>

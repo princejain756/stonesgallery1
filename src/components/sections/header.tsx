@@ -27,8 +27,7 @@ const navLinks = [
   { href: '/pages/our-story', label: 'OUR STORY' },
   { href: '/pages/our-collection', label: 'OUR COLLECTIONS' },
   { href: '/pages/our-projects', label: 'OUR PROJECTS' },
-  { href: '/pages/our-services', label: 'OUR SERVICES' },
-  { href: '/pages/contact-us', label: 'OUR CONTACT' },
+  { href: '/pages/our-contact', label: 'OUR CONTACT' },
 ];
 
 export default function Header() {

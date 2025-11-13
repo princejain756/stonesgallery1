@@ -12,8 +12,7 @@ const staticRoutes = [
   { path: '/pages/our-story', priority: 0.9, changeFrequency: 'monthly' as const },
   { path: '/pages/our-collection', priority: 0.95, changeFrequency: 'weekly' as const },
   { path: '/pages/our-projects', priority: 0.9, changeFrequency: 'weekly' as const },
-  { path: '/pages/our-services', priority: 0.9, changeFrequency: 'monthly' as const },
-  { path: '/pages/contact-us', priority: 0.85, changeFrequency: 'monthly' as const },
+  { path: '/pages/our-contact', priority: 0.9, changeFrequency: 'monthly' as const },
   { path: '/pages/blog', priority: 0.85, changeFrequency: 'weekly' as const },
   
   // SEO & Trust pages

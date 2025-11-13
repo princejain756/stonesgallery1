@@ -110,15 +110,42 @@ export default function OurStoryPage() {
       {/* Store Images Section */}
       <section className="mx-auto max-w-[1100px] px-5 py-10 md:py-16">
         <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-8 text-center">Our Boutique</h2>
-        <div className="grid grid-cols-1 gap-6 max-w-md mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative h-[400px] overflow-hidden">
             <Image
-              src="/stonesgallerystages/Phase 4- Fabrication.jpeg"
-              alt="Stones Gallery Boutique - Craftsmanship"
+              src="/showroomimage.webp"
+              alt="Stones Gallery Showroom"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Showroom</p>
+            </div>
+          </div>
+          <div className="relative h-[400px] overflow-hidden">
+            <Image
+              src="/showroomimagebottom.webp"
+              alt="Stones Gallery Showroom Bottom View"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Showroom Interior</p>
+            </div>
+          </div>
+          <div className="relative h-[400px] overflow-hidden">
+            <Image
+              src="/showroomimage3.webp"
+              alt="Stones Gallery Showroom Additional View"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <p className="text-sm md:text-base font-medium">Showroom Display</p>
+            </div>
           </div>
         </div>
       </section>
@@ -136,8 +163,9 @@ export default function OurStoryPage() {
                 <div>
                   <h3 className="text-lg font-medium text-[#444] mb-2">Location</h3>
                   <p className="text-base text-[#8d8986] leading-relaxed">
-                    Jigani, Bangalore<br />
-                    Karnataka, India
+                    DISH IMPEX LLP<br />
+                    Sy.no, 16/2, hobli, begihalli village, taluk<br />
+                    Jigani, Anekal, Karnataka 560105
                   </p>
                 </div>
               </div>
@@ -146,8 +174,8 @@ export default function OurStoryPage() {
                 <Phone className="w-6 h-6 text-[#8d8986] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-[#444] mb-2">Phone</h3>
-                  <a href="tel:+919876543210" className="text-base text-[#8d8986] hover:text-black transition-colors">
-                    +91 98765 43210
+                  <a href="tel:+919448987711" className="text-base text-[#8d8986] hover:text-black transition-colors">
+                    +91 94489 87711
                   </a>
                 </div>
               </div>
@@ -164,7 +192,7 @@ export default function OurStoryPage() {
 
               <div className="pt-6">
                 <Link
-                  href="/pages/contact-us"
+                  href="/pages/our-contact"
                   className="inline-block border border-[#cfcfcf] px-8 py-3 text-xs uppercase tracking-[0.15em] text-[#444] hover:bg-black hover:text-white hover:border-black transition-colors"
                 >
                   Get in Touch
@@ -175,7 +203,7 @@ export default function OurStoryPage() {
             {/* Map */}
             <div className="relative h-[400px] overflow-hidden border border-stone-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b83e05e2c91%3A0x82acf4b7e7f4e84f!2sJigani%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62229.05500832097!2d77.54814287772911!3d12.792582679619444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf9b59d3b33bd168!2sDISH%20IMPEX%20LLP%20-%20STONE%20BOUTIQUE%20BENGALURU!5e0!3m2!1sen!2sin!4v1709393742612!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

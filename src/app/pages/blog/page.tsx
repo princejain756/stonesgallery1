@@ -189,7 +189,7 @@ export default async function BlogPage() {
               ))}
             </ul>
             <Link
-              href="/pages/contact-us"
+              href="/pages/our-contact"
               className="mt-6 inline-flex border border-white/60 px-6 py-3 text-xs uppercase tracking-[0.3em] hover:bg-white/10"
             >
               Talk to export desk
@@ -226,10 +226,10 @@ export default async function BlogPage() {
             SEO desk routes every enquiry to the right product specialist within 12 working hours.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-[0.3em]">
-            <Link href="/pages/contact-us" className="border border-white/70 px-6 py-3 hover:bg-white/10">
+            <Link href="/pages/our-contact" className="border border-white/70 px-6 py-3 hover:bg-white/10">
               Contact us
             </Link>
-            <Link href="/pages/our-services" className="border border-white/30 px-6 py-3 hover:border-white/60">
+            <Link href="/pages/our-contact" className="border border-white/30 px-6 py-3 hover:border-white/60">
               View services
             </Link>
           </div>

@@ -89,7 +89,7 @@ const SplitHeroIntroducing = () => {
           </div>
           <div>
             <a
-              href="/pages/our-services"
+              href="/pages/our-contact"
               className="inline-flex items-center border border-white/70 px-6 py-3 text-xs tracking-[0.3em] uppercase hover:bg-white/10 transition-colors"
             >
               View Capabilities

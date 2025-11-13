@@ -118,7 +118,7 @@ export default function FAQPage() {
                 WhatsApp: +91 94489 87711
               </a>
               <a
-                href="/pages/contact-us"
+                href="/pages/our-contact"
                 className="inline-block bg-white hover:bg-stone-100 text-stone-900 font-semibold px-8 py-4 rounded-lg transition-colors"
               >
                 Contact Us

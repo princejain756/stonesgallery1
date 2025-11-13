@@ -18,10 +18,9 @@ export default function NotFound() {
 
   const popularLinks = [
     { href: "/pages/our-collection", label: "Browse Collections", icon: "🏛️" },
-    { href: "/pages/our-services", label: "Our Services", icon: "⚒️" },
+    { href: "/pages/our-contact", label: "Our Contact", icon: "📞" },
     { href: "/pages/blog", label: "Stone Guides & Blog", icon: "📚" },
     { href: "/pages/faq", label: "FAQ", icon: "❓" },
-    { href: "/pages/contact-us", label: "Contact Us", icon: "📞" },
     { href: "/pages/locations/jaipur", label: "Visit Jaipur Showroom", icon: "📍" }
   ];
 
