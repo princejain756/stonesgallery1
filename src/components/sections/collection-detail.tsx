@@ -324,23 +324,39 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
 
             {/* Right Side - Large Image with Slideshow */}
             <div 
-              className="relative h-[400px] md:h-[600px] rounded-lg overflow-visible shadow-2xl order-1 md:order-2 flex items-center justify-center"
+              className={`relative h-[400px] md:h-[600px] rounded-lg overflow-visible shadow-2xl order-1 md:order-2 flex items-center justify-center ${
+                ['idols-and-temples', 'fountain', 'wall-cladding'].includes(slug) 
+                  ? 'bg-gradient-to-br from-white via-stone-50 to-stone-100' 
+                  : 'bg-white'
+              }`}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <div className="relative w-full h-full flex items-center justify-center">
+              {/* Background lighting effect - only for specific collections */}
+              {['idols-and-temples', 'fountain', 'wall-cladding'].includes(slug) && (
+                <div className="absolute inset-0 bg-radial-gradient pointer-events-none rounded-lg" 
+                  style={{
+                    background: 'radial-gradient(circle at 50% 40%, rgba(255,255,255,0.6) 0%, transparent 70%)'
+                  }}
+                />
+              )}
+              
+              <div className="relative w-full h-full flex items-center justify-center z-10">
                 <img
                   src={displayImage}
                   alt={collection.title}
-                  className={`max-w-full max-h-full w-auto h-auto object-contain transition-opacity duration-700 ${
+                  className={`max-w-full max-h-full w-auto h-auto object-contain transition-all duration-700 ${
                     imageLoaded ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  } ${['idols-and-temples', 'fountain', 'wall-cladding'].includes(slug) ? 'brightness-110 contrast-105' : ''}`}
                   onLoad={() => setImageLoaded(true)}
                   style={{ 
                     imageOrientation: 'from-image',
                     objectFit: 'contain',
                     objectPosition: 'center',
-                    transform: needsRotation ? 'rotate(-90deg)' : 'none'
+                    transform: needsRotation ? 'rotate(-90deg)' : 'none',
+                    filter: ['idols-and-temples', 'fountain', 'wall-cladding'].includes(slug) 
+                      ? 'drop-shadow(0 10px 30px rgba(0,0,0,0.1))' 
+                      : 'none'
                   }}
                 />
               </div>
