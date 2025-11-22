@@ -62,7 +62,7 @@ const aboutSchema = {
   '@type': 'AboutPage',
   name: 'Our Story - Stones Gallery',
   description:
-    'Stones Gallery by Dish Impex LLP is a design house where personalisation meets luxury. We craft unique statues, idols, wall claddings, home décor, modern arts, temples & inlays from the finest natural stones.',
+    'Stones Gallery by Dish Impex LLP is a design house where personalisation meets luxury. We craft unique statues, idols, stone claddings, home décor, modern arts, temples & inlays from the finest natural stones.',
   mainEntity: {
     '@type': 'Organization',
     name: 'Stones Gallery by Dish Impex LLP',
@@ -100,7 +100,7 @@ export default function OurStoryPage() {
           Stones Gallery by Dish Impex LLP is a design house where personalisation meets luxury.
         </p>
         <p className="mb-6 text-base leading-7">
-          Stones Gallery's Natural Stone Boutique offers unique Statutes, Idols, Wall Claddings, Home Decors, Modern-Arts, Temple & Inlays all crafted from finest quality of natural stones.
+          Stones Gallery's Natural Stone Boutique offers unique Statutes, Idols, Stone Claddings, Home Decors, Modern-Arts, Temple & Inlays all crafted from finest quality of natural stones.
         </p>
         <p className="text-base leading-7">
           Discover and explore our exclusive collection at Jigani, Bangalore.

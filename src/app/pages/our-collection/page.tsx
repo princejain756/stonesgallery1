@@ -10,7 +10,7 @@ const collectionsCategories = [
   { name: 'Idols and Temples', slug: 'idols-and-temples' },
   { name: 'Home Decor', slug: 'home-decor' },
   { name: 'Fountain', slug: 'fountain' },
-  { name: 'Wall Cladding', slug: 'wall-cladding' },
+  { name: 'Stone Cladding', slug: 'wall-cladding' },
 ];
 
 export default function CollectionPage() {

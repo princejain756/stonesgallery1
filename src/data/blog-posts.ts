@@ -37,7 +37,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "luxury-marble-bangalore-lookbook",
-    title: "Italian Marble & Luxury Stone Lookbook for Bengaluru Homes",
+    title: "Marble",
     summary:
       "Curated pairings of Italian marble, pistachio marble, onyx, and quartzite for penthouses from Indiranagar to Koramangala.",
     coverImage: "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1200&q=80",

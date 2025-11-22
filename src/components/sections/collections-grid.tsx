@@ -34,7 +34,7 @@ const collectionsData: Collection[] = [
     slug: "fountain"
   },
   {
-    title: "WALL CLADDING",
+    title: "STONE CLADDING",
     imageUrl: "/collections/stonesgallerycollections/WALLPANELBIG.webp",
     heightClass: "h-[500px]",
     slug: "wall-cladding"

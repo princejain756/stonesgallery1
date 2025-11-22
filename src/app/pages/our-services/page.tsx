@@ -284,7 +284,7 @@ export default function OurServicesPage() {
       <section className="mx-auto max-w-[1100px] px-5 py-14 md:py-20 text-center">
         <h2 className="text-2xl md:text-3xl uppercase tracking-[0.2em] text-[#444] mb-6">Explore Our Products</h2>
         <p className="text-base text-[#8d8986] mb-8 max-w-2xl mx-auto">
-          Discover our exclusive collection of natural stone products, from idols and sculptures to home décor and wall claddings.
+          Discover our exclusive collection of natural stone products, from idols and sculptures to home décor and stone claddings.
         </p>
         <Link
           href="/pages/our-collection"

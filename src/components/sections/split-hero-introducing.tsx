@@ -74,8 +74,7 @@ const SplitHeroIntroducing = () => {
               Granite, Marble &amp; Sculptures crafted for iconic spaces
             </h3>
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-white/90">
-              From Jigani factory floors to Indiranagar penthouses, Stones Gallery delivers Italian marble, Dark Roast
-              granite, bespoke temple idols, quartzite countertops, and hand-carved murals across the city.
+              Stones Gallery delivers exquisite Modern Art, Dining Tables, Sacred Idols and Temples, Decorative Fountains, and stunning Stone cladding featuring intricate designs for your spaces.
             </p>
           </div>
           <div className="grid gap-4 text-sm md:grid-cols-2">

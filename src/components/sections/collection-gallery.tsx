@@ -322,7 +322,7 @@ const collectionNames: Record<string, string> = {
   'idols-and-temples': 'Idols and Temples',
   'home-decor': 'Home Decor',
   'fountain': 'Fountain',
-  'wall-cladding': 'Wall Cladding',
+  'wall-cladding': 'Stone Cladding',
 };
 
 const CollectionGallery: React.FC<CollectionGalleryProps> = ({ isOpen, onClose, collectionSlug }) => {

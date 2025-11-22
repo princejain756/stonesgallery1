@@ -135,7 +135,7 @@ const collectionsDatabase: Record<string, CollectionData> = {
   },
   'wall-cladding': {
     id: '5',
-    title: 'WALL CLADDING',
+    title: 'STONE CLADDING',
     subtitle: 'Decorative Panels',
     description: 'Stunning stone wall cladding featuring intricate chakra designs that add depth, texture, and artistic appeal to any interior space. Transform your walls into masterpieces.',
     smallImage: '/collections/stonesgallerycollections/wallpanelchakrasmall.webp',
@@ -201,7 +201,7 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
     : collection.largeImage;
 
   // Determine if this collection needs rotation
-  const needsRotation = ['idols-and-temples', 'home-decor', 'fountain'].includes(slug);
+  const needsRotation = false;
 
   return (
     <div className="min-h-screen bg-white">
@@ -306,7 +306,10 @@ const CollectionDetail: React.FC<CollectionDetailProps> = ({ slug = 'dining-tabl
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-10 py-3 md:py-4 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm md:text-base">
+                <button 
+                  onClick={() => window.open('https://wa.me/919448987711', '_blank')}
+                  className="px-10 py-3 md:py-4 border border-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 text-stone-800 tracking-wider text-sm md:text-base"
+                >
                   EXPLORE MORE
                 </button>
                 
