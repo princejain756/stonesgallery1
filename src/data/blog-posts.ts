@@ -10,12 +10,18 @@ export type BlogFAQ = {
   answer: string;
 };
 
+export type BlogImage = {
+  src: string;
+  alt: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
   summary: string;
   coverImage: string;
   heroAlt: string;
+  galleryImages?: BlogImage[];
   readTime: string;
   publishedOn: string;
   categories: string[];
@@ -35,6 +41,114 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "basavaraj-bommai-visit-stones-gallery",
+    title: "Sri Basavaraj Bommai Ji Visits Stones Gallery, Bengaluru",
+    summary:
+      "Hon'ble MP and former Karnataka Chief Minister Sri Basavaraj Bommai Ji visited Stones Gallery (Dish Impex LLP) in Jigani, Bengaluru, experiencing our marble, granite, onyx, quartzite, and handcrafted stone artistry.",
+    coverImage: "/BlogWithExChiefMinister/1.webp",
+    heroAlt: "Sri Basavaraj Bommai Ji welcomed at Stones Gallery stone showroom in Jigani, Bengaluru",
+    galleryImages: [
+      {
+        src: "/BlogWithExChiefMinister/2.webp",
+        alt: "Sri Basavaraj Bommai Ji with the Stones Gallery team during the showroom visit",
+      },
+    ],
+    readTime: "4 min read",
+    publishedOn: "Nov 2025",
+    categories: ["VIP Visit", "Showroom"],
+    keywords: [
+      "basavaraj bommai visit",
+      "stones gallery bengaluru",
+      "stone gallery jigani",
+      "granite showroom bengaluru",
+      "marble showroom bangalore",
+      "natural stone supplier bangalore",
+      "dish impex llp",
+      "onyx stone bangalore",
+      "quartzite supplier bangalore",
+      "temple sculptures bangalore",
+      "marble idols bangalore",
+      "premium stone gallery india",
+    ],
+    sections: [
+      {
+        title: "A distinguished visit to our Jigani stone gallery",
+        paragraphs: [
+          "We were honored to welcome Hon'ble MP and former Karnataka Chief Minister Sri Basavaraj Bommai Ji to Stones Gallery, our stone showroom in Jigani, Bengaluru. The visit recognized Karnataka's legacy of craftsmanship and the growing demand for premium natural stone.",
+          "Our team showcased how Dish Impex LLP curates verified marble, granite, onyx, and quartzite for architects, builders, and homeowners seeking reliable sourcing with project-ready quality checks.",
+        ],
+      },
+      {
+        title: "Premium marble, granite, onyx, and quartzite under one roof",
+        paragraphs: [
+          "The walkthrough highlighted Italian marble for luxury interiors, granite slabs for high-traffic flooring and elevations, and quartzite countertops chosen for durability without losing elegance.",
+          "From translucent onyx feature walls to book-matched slabs, Stones Gallery provides finish guidance, sealing protocols, and sampling so clients can make confident selections before installation.",
+        ],
+        bullets: [
+          "Italian and imported marble slabs for premium residences",
+          "Granite slabs and exterior stone cladding for villas and commercial projects",
+          "Quartzite countertops, onyx panels, and custom finish options",
+        ],
+      },
+      {
+        title: "Temple sculptures and handcrafted stone artistry",
+        paragraphs: [
+          "Sri Basavaraj Bommai Ji also viewed our carving studio, where master artisans create marble idols, temple sculptures, and bespoke stone murals with vastu-aligned detailing.",
+          "This craftsmanship, rooted in Jigani, has positioned Stones Gallery as a trusted destination for temple projects and heritage-inspired stone decor across Karnataka and India.",
+        ],
+      },
+      {
+        title: "Why this visit matters for architects and homeowners",
+        paragraphs: [
+          "A visit from a former Karnataka CM underscores the trust placed in Stones Gallery as a premium stone supplier in Bengaluru with pan-India reach.",
+          "Whether you need a granite showroom in Bengaluru, a marble showroom in Bangalore, or custom temple sculptures, our team delivers end-to-end guidance from selection to delivery.",
+        ],
+        insight:
+          "Plan a private walkthrough at Stones Gallery to compare slabs, discuss fabrication options, and receive a tailored stone sourcing plan.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Stones Gallery located in Bengaluru?",
+        answer:
+          "Stones Gallery is located in Jigani Industrial Area, Bengaluru, with easy access for customers from JP Nagar, Jayanagar, Banashankari, Electronic City, and surrounding hubs.",
+      },
+      {
+        question: "Can I schedule a private showroom visit?",
+        answer:
+          "Yes. Our team arranges private walkthroughs for architects, builders, and homeowners to review marble, granite, quartzite, and onyx collections in person.",
+      },
+      {
+        question: "Do you supply stone outside Bengaluru?",
+        answer:
+          "Absolutely. Dish Impex LLP supports pan-India deliveries and export requirements with documentation, packaging, and logistics support.",
+      },
+    ],
+    cta: {
+      label: "Schedule a showroom visit",
+      href: "/pages/our-contact",
+    },
+    seo: {
+      title: "Basavaraj Bommai Visit to Stones Gallery Bengaluru | Dish Impex LLP",
+      description:
+        "Hon'ble MP and former Karnataka CM Sri Basavaraj Bommai Ji visited Stones Gallery in Jigani, Bengaluru. Explore our marble, granite, onyx, quartzite, and temple sculpture craftsmanship.",
+      keywords: [
+        "basavaraj bommai visit",
+        "stones gallery bengaluru",
+        "stone gallery jigani",
+        "granite showroom bengaluru",
+        "marble showroom bangalore",
+        "natural stone supplier bangalore",
+        "dish impex llp",
+        "onyx stone bangalore",
+        "quartzite supplier bangalore",
+        "temple sculptures bangalore",
+        "marble idols bangalore",
+        "premium stone gallery india",
+      ],
+    },
+  },
   {
     slug: "luxury-marble-bangalore-lookbook",
     title: "Marble",

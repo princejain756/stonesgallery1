@@ -48,12 +48,17 @@ export default function BlogDetailPage({ params }: { params: BlogParams }) {
     notFound();
   }
 
+  const articleImages = [
+    post.coverImage,
+    ...(post.galleryImages?.map((image) => image.src) ?? []),
+  ];
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.seo.title,
     description: post.seo.description,
-    image: [post.coverImage],
+    image: articleImages,
     author: {
       '@type': 'Organization',
       name: 'Dish Impex LLP',
@@ -106,6 +111,16 @@ export default function BlogDetailPage({ params }: { params: BlogParams }) {
       <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
         <article className="space-y-10">
           <p className="text-lg text-white/80 leading-relaxed">{post.summary}</p>
+
+          {post.galleryImages && post.galleryImages.length > 0 && (
+            <div className="grid gap-4 md:grid-cols-2">
+              {post.galleryImages.map((image) => (
+                <div key={image.src} className="relative h-64 w-full overflow-hidden border border-white/10">
+                  <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
 
           {post.sections.map((section) => (
             <div key={section.title} className="space-y-4">
